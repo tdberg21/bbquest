@@ -1,4 +1,4 @@
-import { addRestaurants } from './';
+import { addRestaurants } from '.';
 
 
 describe('ACTION TESTS', () => {
