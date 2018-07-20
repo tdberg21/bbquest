@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
+import { loginUser } from '../../actions';
 
 export class LoginForm extends Component {
   constructor() {
@@ -8,7 +9,6 @@ export class LoginForm extends Component {
 
     this.state = {
       username: '',
-      email: '',
       password: ''
     };
   }
@@ -20,17 +20,26 @@ export class LoginForm extends Component {
     });
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('submit');
+    this.props.loginUser(this.state.username);
+  }
+
   render() {
     return(
-      <form>
-        <h1 className='form-header'>Sign In</h1>
+      <form 
+        className='login-form'
+        onSubmit={this.handleSubmit}
+      >
+        <h3 className='form-header'>Log In</h3>
         <input
-          className='email-field'
-          aria-label='Please Enter Your Email'
-          placeholder='email'
+          className='username-field'
+          aria-label='Please Enter Your Username'
+          placeholder='username'
           type='text'
-          name='email'
-          value={this.state.email}
+          name='username'
+          value={this.state.username}
           onChange={this.handleChange}
         />
         <input
@@ -53,4 +62,14 @@ export class LoginForm extends Component {
   }
 }
 
-export default LoginForm;
+export const mapStateToProps = (state) => ({
+  username: state.user.username
+});
+
+export const mapDispatchToProps = (dispatch) => {
+  return {
+    loginUser: (username) => dispatch(loginUser(username))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

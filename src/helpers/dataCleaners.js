@@ -3,6 +3,7 @@ export const scrubRestaurants =(response) => (
     return {
       name: business.name,
       rating: business.rating,
-      price: business.price
+      price: business.price,
+      image: business.image_url
     };
   }));

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import { fetchRestaurantData } from './helpers/apiCalls';
-import { apiKey } from './helpers/apiKey';
-import { mockResponse } from './helpers/mockdata';
-import { scrubRestaurants } from './helpers/dataCleaners';
-import { addRestaurants } from './actions';
+// import { fetchRestaurantData } from './helpers/apiCalls';
+// import { apiKey } from './helpers/apiKey';
+import { mockResponse } from '../../helpers/mockdata';
+import { scrubRestaurants } from '../../helpers/dataCleaners';
+import { addRestaurants } from '../../actions';
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
-import LoginForm from './containers/LoginForm/LoginForm';
-import Header from './containers/Header';
+import { Route, withRouter } from 'react-router-dom';
+import LoginForm from '../LoginForm/LoginForm';
+import Header from '../Header/Header';
+import CardContainer from '../CardContainer/CardContainer';
 
 class App extends Component {
 
@@ -23,7 +24,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Route exact path='/login' component={LoginForm} />
+        <Route path='/login' component={LoginForm} />
+        <Route path='/' component={CardContainer} />
       </div>
     );
   }
@@ -37,4 +39,4 @@ export const mapDispatchToProps = (dispatch) => ({
   addRestaurants: (restaurants) => dispatch(addRestaurants(restaurants))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
