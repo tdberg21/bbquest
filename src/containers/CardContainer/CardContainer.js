@@ -5,10 +5,9 @@ import './CardContainer.css';
 
 export class CardContainer extends Component {
 
-  restaurantsToDisplay = (restaurants) => restaurants.map((restaurant, index) => {
+  restaurantsToDisplay = restaurants => restaurants.map((restaurant, index) => {
     return <Card {...restaurant} key={`${index} + ${restaurant.name}`} />;
   })
-
 
   render() {
     return (

@@ -12,3 +12,22 @@ export const fetchRestaurantData = async (key) => {
   const results = await response.json();
   return results;
 };
+
+
+export const fetchUser = async (username, email, password) => {
+  const url = `http://localhost:3000/api/v1/users?username=${username}&email=${email}&password=${password}`;
+  const response = await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({
+      username,
+      email,
+      password
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  const results = await response.json();
+  console.log('results:', results);  
+
+};

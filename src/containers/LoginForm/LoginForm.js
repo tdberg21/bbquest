@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { loginUser } from '../../actions';
+import { fetchUser } from '../../helpers/apiCalls';
 
 export class LoginForm extends Component {
   constructor() {
@@ -9,6 +10,7 @@ export class LoginForm extends Component {
 
     this.state = {
       username: '',
+      email: '',
       password: ''
     };
   }
@@ -22,12 +24,14 @@ export class LoginForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log('submit');
+    const { username, email, password } = this.state;
+    const results = fetchUser(username, email, password);
     this.props.loginUser(this.state.username);
+    this.props.history.push('/');
   }
 
   render() {
-    return(
+    return (
       <form 
         className='login-form'
         onSubmit={this.handleSubmit}
@@ -40,6 +44,15 @@ export class LoginForm extends Component {
           type='text'
           name='username'
           value={this.state.username}
+          onChange={this.handleChange}
+        />
+        <input
+          className='email-field'
+          aria-label='Please Enter Your Email'
+          placeholder='email'
+          type='text'
+          name='email'
+          value={this.state.email}
           onChange={this.handleChange}
         />
         <input
