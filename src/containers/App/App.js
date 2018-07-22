@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-// import { fetchRestaurantData } from './helpers/apiCalls';
-// import { apiKey } from './helpers/apiKey';
-import { mockResponse } from '../../helpers/mockdata';
+import { fetchRestaurantData } from '../../helpers/apiCalls';
+import { apiKey } from '../../helpers/apiKey';
 import { scrubRestaurants } from '../../helpers/dataCleaners';
 import { addRestaurants } from '../../actions';
 import { connect } from 'react-redux';
@@ -14,8 +13,9 @@ import CardContainer from '../CardContainer/CardContainer';
 class App extends Component {
 
   componentDidMount = async () => {
-    // const restaurants = await fetchRestaurantData(apiKey);
-    const cleanRestaurants = scrubRestaurants(mockResponse);
+    const restaurants = await fetchRestaurantData(apiKey);
+    console.log(restaurants);
+    const cleanRestaurants = scrubRestaurants(restaurants);
     this.props.addRestaurants(cleanRestaurants);
     console.log(cleanRestaurants);
   }
