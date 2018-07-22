@@ -29,6 +29,11 @@ export class LoginForm extends Component {
     const visited = await fetchVisitedRestaurants(results.id);
     this.props.loginUser(results.username, results.id);
     this.props.addVisited(visited);
+    this.setState({
+      username: '',
+      email: '',
+      password: ''
+    });
     this.props.history.push('/');
   }
 
