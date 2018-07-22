@@ -28,6 +28,5 @@ export const fetchUser = async (username, email, password) => {
     }
   });
   const results = await response.json();
-  console.log('results:', results);  
-
+  return await results; 
 };
