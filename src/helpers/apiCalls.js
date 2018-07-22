@@ -35,6 +35,5 @@ export const fetchVisitedRestaurants = async (user_id) => {
   const url = `http://localhost:3000/api/v1/restaurants/?id=${user_id}`;
   const response = await fetch(url);
   const results = await response.json();
-  console.log(results);
   return await results;
 };

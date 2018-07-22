@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { fetchRestaurantData } from '../../helpers/apiCalls';
-import { apiKey } from '../../helpers/apiKey';
-import { scrubRestaurants } from '../../helpers/dataCleaners';
 import { addRestaurants } from '../../actions';
 import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
@@ -23,7 +20,8 @@ class App extends Component {
         <Header />
         <Route path='/login' component={LoginForm} />
         <Route path='/restaurants' component={CardContainer} />
-        <Route path='/' component={SearchForm} />
+        {/* <Route path='/' component={SearchForm} /> */}
+        <Route path='/search' component={SearchForm} />
       </div>
     );
   }
