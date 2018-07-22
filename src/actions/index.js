@@ -3,3 +3,14 @@ export const addRestaurants = (restaurants) => ({
   restaurants
 });
 
+export const loginUser = (username, id) => ({
+  type: 'LOGIN_USER',
+  username,
+  id
+});
+
+export const addVisited = (visited) => ({
+  type: 'ADD_VISITED',
+  visited
+});
+

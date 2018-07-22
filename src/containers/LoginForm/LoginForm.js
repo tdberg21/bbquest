@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
+import { loginUser, addVisited } from '../../actions';
+import { fetchUser, fetchVisitedRestaurants } from '../../helpers/apiCalls';
 
 export class LoginForm extends Component {
   constructor() {
@@ -20,10 +22,37 @@ export class LoginForm extends Component {
     });
   }
 
+  handleSubmit = async (event) => {
+    event.preventDefault();
+    const { username, email, password } = this.state;
+    const results = await fetchUser(username, email, password);
+    const visited = await fetchVisitedRestaurants(results.id);
+    this.props.loginUser(results.username, results.id);
+    this.props.addVisited(visited);
+    this.setState({
+      username: '',
+      email: '',
+      password: ''
+    });
+    this.props.history.push('/');
+  }
+
   render() {
-    return(
-      <form>
-        <h1 className='form-header'>Sign In</h1>
+    return (
+      <form 
+        className='login-form'
+        onSubmit={this.handleSubmit}
+      >
+        <h3 className='form-header'>Log In</h3>
+        <input
+          className='username-field'
+          aria-label='Please Enter Your Username'
+          placeholder='username'
+          type='text'
+          name='username'
+          value={this.state.username}
+          onChange={this.handleChange}
+        />
         <input
           className='email-field'
           aria-label='Please Enter Your Email'
@@ -53,4 +82,15 @@ export class LoginForm extends Component {
   }
 }
 
-export default LoginForm;
+export const mapStateToProps = (state) => ({
+  username: state.user.username
+});
+
+export const mapDispatchToProps = (dispatch) => {
+  return {
+    loginUser: (username, password) => dispatch(loginUser(username, password)),
+    addVisited: (visited) => dispatch(addVisited(visited))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
