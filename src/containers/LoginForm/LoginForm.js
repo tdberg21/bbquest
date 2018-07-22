@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { loginUser } from '../../actions';
-import { fetchUser } from '../../helpers/apiCalls';
+import { fetchUser, fetchVisitedRestaurants } from '../../helpers/apiCalls';
 
 export class LoginForm extends Component {
   constructor() {
@@ -26,6 +26,8 @@ export class LoginForm extends Component {
     event.preventDefault();
     const { username, email, password } = this.state;
     const results = await fetchUser(username, email, password);
+    const visited = await fetchVisitedRestaurants(results.id);
+    console.log('visited:', visited);
     this.props.loginUser(results.username, results.id);
     this.props.history.push('/');
   }
