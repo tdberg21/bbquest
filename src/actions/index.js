@@ -9,3 +9,8 @@ export const loginUser = (username, id) => ({
   id
 });
 
+export const addVisited = (visited) => ({
+  type: 'ADD_VISITED',
+  visited
+});
+

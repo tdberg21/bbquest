@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
-import { loginUser } from '../../actions';
+import { loginUser, addVisited } from '../../actions';
 import { fetchUser, fetchVisitedRestaurants } from '../../helpers/apiCalls';
 
 export class LoginForm extends Component {
@@ -27,8 +27,8 @@ export class LoginForm extends Component {
     const { username, email, password } = this.state;
     const results = await fetchUser(username, email, password);
     const visited = await fetchVisitedRestaurants(results.id);
-    console.log('visited:', visited);
     this.props.loginUser(results.username, results.id);
+    this.props.addVisited(visited);
     this.props.history.push('/');
   }
 
@@ -83,7 +83,8 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    loginUser: (username, password) => dispatch(loginUser(username, password))
+    loginUser: (username, password) => dispatch(loginUser(username, password)),
+    addVisited: (visited) => dispatch(addVisited(visited))
   };
 };
 
