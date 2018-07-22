@@ -1,12 +1,12 @@
-export const fetchRestaurantData = async (key) => {
-
-  const url = `https://api.yelp.com/v3/businesses/search?location=denver_co&categories=bbq&limit=15`;
+export const fetchRestaurantData = async (key, location) => {
+  console.log(location);
+  const corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com/';
+  const url = `${corsAnywhereUrl}https://api.yelp.com/v3/businesses/search?location=${location}&categories=bbq&limit=20`;
   const response = await fetch(url, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${key}`,
       'Content-Type': 'application/json'
-      // 'Access-Control - Allow - Origin': 'http://localhost:3000'
     }
   });
   const results = await response.json();
@@ -35,6 +35,5 @@ export const fetchVisitedRestaurants = async (user_id) => {
   const url = `http://localhost:3000/api/v1/restaurants/?id=${user_id}`;
   const response = await fetch(url);
   const results = await response.json();
-  console.log(results);
   return await results;
 };
