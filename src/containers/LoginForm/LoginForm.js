@@ -22,11 +22,11 @@ export class LoginForm extends Component {
     });
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const { username, email, password } = this.state;
-    const results = fetchUser(username, email, password);
-    this.props.loginUser(this.state.username);
+    const results = await fetchUser(username, email, password);
+    this.props.loginUser(results.username, results.id);
     this.props.history.push('/');
   }
 
@@ -81,7 +81,7 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    loginUser: (username) => dispatch(loginUser(username))
+    loginUser: (username, password) => dispatch(loginUser(username, password))
   };
 };
 
