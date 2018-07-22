@@ -26,8 +26,8 @@ class SearchForm extends Component {
     event.preventDefault();
     const restaurants = await fetchRestaurantData(apiKey, this.state.location);
     const cleanRestaurants = scrubRestaurants(restaurants);
-    console.log(cleanRestaurants);
     this.props.addRestaurants(cleanRestaurants);
+    this.props.history.push('/restaurants');
   }
 
 
@@ -38,7 +38,6 @@ class SearchForm extends Component {
           className='login-form'
           onSubmit={this.handleSubmit}
         >
-          <h3 className='form-header'>Log In</h3>
           <input
             className='location-field'
             aria-label='Enter Your Location'
