@@ -26,13 +26,16 @@ export class SearchForm extends Component {
     event.preventDefault();
     const restaurants = await fetchRestaurantData(apiKey, this.state.location);
     const cleanRestaurants = scrubRestaurants(restaurants);
-    this.props.addRestaurants(cleanRestaurants);
+    this.addRestaurantsToStore(cleanRestaurants);
+  }
+
+  addRestaurantsToStore = (restaurants) => {
+    this.props.addRestaurants(restaurants);
     this.props.history.push('/restaurants');
   }
 
-
   render() {
-    return(
+    return (
       <div>
         <form
           className='login-form'

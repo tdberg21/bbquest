@@ -22,6 +22,11 @@ export default class Header extends Component {
                Login
             </NavLink>
           </li>
+          <li>
+            <NavLink className='search-link' to='/search'>
+              Search
+            </NavLink>
+          </li>
         </ul>
       </div>
     );
