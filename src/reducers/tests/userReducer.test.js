@@ -2,6 +2,7 @@ import { userReducer } from '../userReducer';
 import * as actions from '../../actions';
 
 describe('user reducer tests', () => {
+  
   it('should return the initial state', () => {
     const expected = {};
     const results = userReducer(undefined, {});
