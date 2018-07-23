@@ -10,15 +10,16 @@ import { Route, withRouter } from 'react-router-dom';
 import LoginForm from '../LoginForm/LoginForm';
 import Header from '../Header/Header';
 import CardContainer from '../CardContainer/CardContainer';
+import SearchForm from '../SearchForm/SearchForm';
 
-class App extends Component {
+export class App extends Component {
 
-  componentDidMount = async () => {
-    // const restaurants = await fetchRestaurantData(apiKey);
-    const cleanRestaurants = scrubRestaurants(mockResponse);
-    this.props.addRestaurants(cleanRestaurants);
-    console.log(cleanRestaurants);
-  }
+  // componentDidMount = async () => {
+  //   // const restaurants = await fetchRestaurantData(apiKey);
+  //   const cleanRestaurants = scrubRestaurants(mockResponse);
+  //   this.props.addRestaurants(cleanRestaurants);
+  //   console.log(cleanRestaurants);
+  // }
 
   render() {
     return (
@@ -26,6 +27,7 @@ class App extends Component {
         <Header />
         <Route path='/login' component={LoginForm} />
         <Route path='/' component={CardContainer} />
+        <Route path='/search' component={SearchForm} />
       </div>
     );
   }
