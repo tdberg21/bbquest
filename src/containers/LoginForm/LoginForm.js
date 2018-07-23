@@ -34,7 +34,7 @@ export class LoginForm extends Component {
       email: '',
       password: ''
     });
-    this.props.history.push('/');
+    this.props.history.push('/search');
   }
 
   render() {
