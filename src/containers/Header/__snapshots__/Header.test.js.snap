@@ -40,6 +40,16 @@ ShallowWrapper {
                         Login
                 </NavLink>
         </li>
+        <li>
+                <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="search-link"
+                        to="/search"
+                >
+                        Search
+                </NavLink>
+        </li>
 </ul>,
       "className": "header",
     },
@@ -68,6 +78,16 @@ ShallowWrapper {
                         to="/login"
             >
                         Login
+            </NavLink>
+</li>,
+          <li>
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="search-link"
+                        to="/search"
+            >
+                        Search
             </NavLink>
 </li>,
         ],
@@ -139,6 +159,38 @@ ShallowWrapper {
           },
           "type": "li",
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="search-link"
+              to="/search"
+>
+              Search
+</NavLink>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": "Search",
+              "className": "search-link",
+              "to": "/search",
+            },
+            "ref": null,
+            "rendered": "Search",
+            "type": [Function],
+          },
+          "type": "li",
+        },
       ],
       "type": "ul",
     },
@@ -173,6 +225,16 @@ ShallowWrapper {
                               Login
                     </NavLink>
           </li>
+          <li>
+                    <NavLink
+                              activeClassName="active"
+                              aria-current="page"
+                              className="search-link"
+                              to="/search"
+                    >
+                              Search
+                    </NavLink>
+          </li>
 </ul>,
         "className": "header",
       },
@@ -201,6 +263,16 @@ ShallowWrapper {
                             to="/login"
               >
                             Login
+              </NavLink>
+</li>,
+            <li>
+              <NavLink
+                            activeClassName="active"
+                            aria-current="page"
+                            className="search-link"
+                            to="/search"
+              >
+                            Search
               </NavLink>
 </li>,
           ],
@@ -268,6 +340,38 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": "Login",
+              "type": [Function],
+            },
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="search-link"
+                to="/search"
+>
+                Search
+</NavLink>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Search",
+                "className": "search-link",
+                "to": "/search",
+              },
+              "ref": null,
+              "rendered": "Search",
               "type": [Function],
             },
             "type": "li",
