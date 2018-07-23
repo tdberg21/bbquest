@@ -2,14 +2,14 @@
   background-color: #111;
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
+
 }
 
 ul {
   display: inherit;
   list-style: none;
   margin-right: 2rem;
-  text-align: right;
 }
 
 .nav-links {
