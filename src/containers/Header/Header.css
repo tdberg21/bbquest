@@ -1,0 +1,20 @@
+.header {
+  background-color: #111;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+ul {
+  display: inherit;
+  list-style: none;
+  margin-right: 2rem;
+  text-align: right;
+}
+
+.nav-links {
+  color: #F3F3F3;
+  font-weight: 300;
+  margin: .75rem;
+  text-decoration: none;
+}
