@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 import { addRestaurants } from '../../actions';
 import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
