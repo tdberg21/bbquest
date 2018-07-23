@@ -6,7 +6,7 @@ import { scrubRestaurants } from '../../helpers/dataCleaners';
 import { addRestaurants } from '../../actions';
 
 
-class SearchForm extends Component {
+export class SearchForm extends Component {
   constructor() {
     super();
 

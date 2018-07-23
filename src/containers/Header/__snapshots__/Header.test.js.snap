@@ -34,16 +34,6 @@ ShallowWrapper {
                 <NavLink
                         activeClassName="active"
                         aria-current="page"
-                        className="search-link"
-                        to="/search"
-                >
-                        Search
-                </NavLink>
-        </li>
-        <li>
-                <NavLink
-                        activeClassName="active"
-                        aria-current="page"
                         className="login-link"
                         to="/login"
                 >
@@ -68,16 +58,6 @@ ShallowWrapper {
                         to="/"
             >
                         Home
-            </NavLink>
-</li>,
-          <li>
-            <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="search-link"
-                        to="/search"
-            >
-                        Search
             </NavLink>
 </li>,
           <li>
@@ -123,38 +103,6 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": "Home",
-            "type": [Function],
-          },
-          "type": "li",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <NavLink
-              activeClassName="active"
-              aria-current="page"
-              className="search-link"
-              to="/search"
->
-              Search
-</NavLink>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "activeClassName": "active",
-              "aria-current": "page",
-              "children": "Search",
-              "className": "search-link",
-              "to": "/search",
-            },
-            "ref": null,
-            "rendered": "Search",
             "type": [Function],
           },
           "type": "li",
@@ -219,16 +167,6 @@ ShallowWrapper {
                     <NavLink
                               activeClassName="active"
                               aria-current="page"
-                              className="search-link"
-                              to="/search"
-                    >
-                              Search
-                    </NavLink>
-          </li>
-          <li>
-                    <NavLink
-                              activeClassName="active"
-                              aria-current="page"
                               className="login-link"
                               to="/login"
                     >
@@ -253,16 +191,6 @@ ShallowWrapper {
                             to="/"
               >
                             Home
-              </NavLink>
-</li>,
-            <li>
-              <NavLink
-                            activeClassName="active"
-                            aria-current="page"
-                            className="search-link"
-                            to="/search"
-              >
-                            Search
               </NavLink>
 </li>,
             <li>
@@ -308,38 +236,6 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": "Home",
-              "type": [Function],
-            },
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="search-link"
-                to="/search"
->
-                Search
-</NavLink>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "aria-current": "page",
-                "children": "Search",
-                "className": "search-link",
-                "to": "/search",
-              },
-              "ref": null,
-              "rendered": "Search",
               "type": [Function],
             },
             "type": "li",

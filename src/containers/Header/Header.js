@@ -18,11 +18,6 @@ export default class Header extends Component {
             </NavLink>
           </li>
           <li>
-            <NavLink className='search-link' to='/search'>
-              Search
-            </NavLink>
-          </li>
-          <li>
             <NavLink className='login-link' to='/login'>
                Login
             </NavLink>
