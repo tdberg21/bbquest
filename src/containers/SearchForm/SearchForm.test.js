@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { SearchForm } from './SearchForm';
+import { SearchForm, mapStateToProps, mapDispatchToProps } from './SearchForm';
+import { addRestaurants } from '../../actions';
 
 describe('SEARCHFORM TESTS', () => {
   
@@ -19,5 +20,29 @@ describe('SEARCHFORM TESTS', () => {
     wrapper.find('.location-field').simulate('change', mockEvent);
     wrapper.instance().forceUpdate();
     expect(spy).toHaveBeenCalled();
+  });
+
+
+  describe('MATCH STATE TO PROPS', () => {
+    it('should return an object with the restaurants array', () => {
+      const mockState = {restaurants: [{name:'Restaurant1'}, {name:'Restaurant2'}]};
+      const mappedProps = mapStateToProps(mockState);
+      const expected = {restaurants: [{ name: "Restaurant1" }, { name: "Restaurant2" }]};
+
+      expect(mappedProps).toEqual(expected);
+    });
+  });
+
+  describe('MAP DISPATCH TO PROPS', () => {
+    it('calls dispatch with add restaurants action', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = addRestaurants({name:'Taco'});
+
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.addRestaurants({name:'Taco'});
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
   });
 });
