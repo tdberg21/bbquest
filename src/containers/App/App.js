@@ -12,7 +12,7 @@ import Header from '../Header/Header';
 import CardContainer from '../CardContainer/CardContainer';
 import SearchForm from '../SearchForm/SearchForm';
 
-export class App extends Component {
+export default class App extends Component {
 
   // componentDidMount = async () => {
   //   // const restaurants = await fetchRestaurantData(apiKey);
@@ -33,12 +33,12 @@ export class App extends Component {
   }
 }
 
-export const mapStateToProps = (state) => ({
-  restaurants: state.restaurants
-});
+// export const mapStateToProps = (state) => ({
+//   restaurants: state.restaurants
+// });
 
-export const mapDispatchToProps = (dispatch) => ({
-  addRestaurants: (restaurants) => dispatch(addRestaurants(restaurants))
-});
+// export const mapDispatchToProps = (dispatch) => ({
+//   addRestaurants: (restaurants) => dispatch(addRestaurants(restaurants))
+// });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

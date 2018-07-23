@@ -22,6 +22,14 @@ describe('SEARCHFORM TESTS', () => {
     expect(spy).toHaveBeenCalled();
   });
 
+  it('should update the state when handleChange is invoked', () => {
+    const wrapper = shallow(<SearchForm />);
+    const mockEvent = { target: { value: 'abc', name: 'location' } };
+
+    wrapper.instance().handleChange(mockEvent);
+
+    expect(wrapper.state('location')).toEqual('abc');
+  });
 
   describe('MATCH STATE TO PROPS', () => {
     it('should return an object with the restaurants array', () => {
