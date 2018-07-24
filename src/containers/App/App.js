@@ -14,7 +14,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import RestaurantDetails from '../RestaurantDetails/RestaurantDetails';
 
-export default class App extends Component {
+export class App extends Component {
 
   // componentDidMount = async () => {
   //   // const restaurants = await fetchRestaurantData(apiKey);
@@ -29,22 +29,24 @@ export default class App extends Component {
         <Header />
         <Route path='/login' component={LoginForm} />
         <Route path='/search' component={SearchForm} />
-        <Route path='/restaurants' component={CardContainer} />
+        <Route exact path='/restaurants' component={CardContainer} />
         <Route path='/signup' component={SignUpForm} />
         <Route path='/restaurants/:name' render={({ match }) => {
-          return <RestaurantDetails name={match.params.name} />;
+          let restaurant = this.props.restaurants.find(restaurant => restaurant.name === match.params.name);
+          console.log(restaurant);
+          return <RestaurantDetails {...restaurant} />;
         }} />
       </div>
     );
   }
 }
 
-// export const mapStateToProps = (state) => ({
-//   restaurants: state.restaurants
-// });
+export const mapStateToProps = (state) => ({
+  restaurants: state.restaurants
+});
 
-// export const mapDispatchToProps = (dispatch) => ({
-//   addRestaurants: (restaurants) => dispatch(addRestaurants(restaurants))
-// });
+export const mapDispatchToProps = (dispatch) => ({
+  addRestaurants: (restaurants) => dispatch(addRestaurants(restaurants))
+});
 
-// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
