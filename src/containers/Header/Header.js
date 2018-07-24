@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import './Header.css';
+import logo from './images/pig64.png';
 
 
 export default class Header extends Component {
@@ -11,7 +12,11 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className='header'>
+      <header className='header'>
+        <div className='logo-container'>
+          <img src={logo} className='logo' alt='BBQuest Logo' />
+          <h2 className='title'>BBQuest</h2>
+        </div>
         <ul className='navigation-links'>
           <li>
             <NavLink className='home-link nav-links' to='/'>
@@ -29,7 +34,7 @@ export default class Header extends Component {
             </NavLink>
           </li>
         </ul>
-      </div>
+      </header>
     );
   }
 }

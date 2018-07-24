@@ -1,0 +1,24 @@
+.login-form-container {
+  background-image: url(https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.bbq-fest.com%2Fbbqfest2015%2Fwp-content%2Fuploads%2F2013%2F02%2Fbackground6.jpg&f=1);
+  height: 100vw;
+  padding-top: 1rem;
+}
+
+.login-form {
+  background-color: #fff;
+  margin: auto;
+  width: 50%;
+  height: 25rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+.form-header {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}

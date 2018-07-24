@@ -2,12 +2,13 @@
   background-color: #111;
   display: flex;
   width: 100%;
-  justify-content: flex-end;
-
+  justify-content: space-between;
+  padding: 0.25rem;
 }
 
 ul {
-  display: inherit;
+  display: flex;
+  justify-content: flex-end;
   list-style: none;
   margin-right: 2rem;
 }
@@ -17,4 +18,20 @@ ul {
   font-weight: 300;
   margin: .75rem;
   text-decoration: none;
+}
+
+.logo-container {
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+
+.title {
+  color: #F3F3F3;
+  margin: 0 0 0 20px;
+}
+
+.logo {
+  height: 2rem; 
 }
