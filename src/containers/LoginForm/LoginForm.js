@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { loginUser, addVisited } from '../../actions';
 import { fetchUser, fetchVisitedRestaurants } from '../../helpers/apiCalls';
 import './LoginForm.css';
