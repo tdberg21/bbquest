@@ -84,6 +84,9 @@ export class LoginForm extends Component {
               Login
             </button>
           </div>
+          <Link to='/signup'>
+            Don't have an account?
+          </Link>
         </form>
       </div>
     );
