@@ -33,7 +33,6 @@ export class App extends Component {
         <Route path='/signup' component={SignUpForm} />
         <Route path='/restaurants/:name' render={({ match }) => {
           let restaurant = this.props.restaurants.find(restaurant => restaurant.name === match.params.name);
-          console.log(restaurant);
           return <RestaurantDetails {...restaurant} />;
         }} />
       </div>

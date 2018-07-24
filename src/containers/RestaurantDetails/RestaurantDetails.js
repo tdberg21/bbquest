@@ -20,17 +20,20 @@ export class RestaurantDetails extends Component {
   }
   
   render () {
+    
     return (
       <div className='restaurant-details-container'>
         <h2>{this.props.name}</h2>
         <img src={this.props.image} alt="restaurant" height="200px" />
+        <p>Phone: {this.props.phone} </p>
+        <p>Address: {this.props.location.address1},<br/> {this.props.location.city}, {this.props.location.state}</p>
         <p>Price Range: {this.props.price} </p>
         <p>Rating: {this.props.rating}</p>
         <button>Mark As Visited</button>
         <p> {this.state.results.reviews[0].text} </p>
         <p> {this.state.results.reviews[1].text} </p>
         <p> {this.state.results.reviews[2].text} </p>
-        <a href={this.props.url}>Visit on Yelp!</a>
+        <a href={this.props.url} target="_blank">Visit on Yelp!</a>
       </div>
     );
   }
