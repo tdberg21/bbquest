@@ -26,8 +26,8 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <Route path='/login' component={LoginForm} />
-        <Route path='/' component={CardContainer} />
         <Route path='/search' component={SearchForm} />
+        <Route path='/' component={CardContainer} />
       </div>
     );
   }

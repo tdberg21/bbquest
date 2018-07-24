@@ -38,7 +38,7 @@ export class SearchForm extends Component {
     return (
       <div>
         <form
-          className='login-form'
+          className='search-form'
           onSubmit={this.handleSubmit}
         >
           <input
