@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import connect from 'react-redux';
 import { Link } from 'react-router-dom';
+import { signUpUser } from '../../helpers/apiCalls';
 import './SignUpForm.css';
 
 
@@ -22,9 +23,12 @@ export default class SignUpForm extends Component {
     });
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('submit');
+    const { username, email, password } = this.state;
+
+    const results = await signUpUser(username, email, password);
+    console.log(results);
   }
 
   render () {
