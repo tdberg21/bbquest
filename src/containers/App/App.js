@@ -12,6 +12,7 @@ import Header from '../Header/Header';
 import CardContainer from '../CardContainer/CardContainer';
 import SearchForm from '../SearchForm/SearchForm';
 import SignUpForm from '../SignUpForm/SignUpForm';
+import RestaurantDetails from '../RestaurantDetails/RestaurantDetails';
 
 export default class App extends Component {
 
@@ -28,8 +29,11 @@ export default class App extends Component {
         <Header />
         <Route path='/login' component={LoginForm} />
         <Route path='/search' component={SearchForm} />
-        <Route path='/' component={CardContainer} />
+        <Route path='/restaurants' component={CardContainer} />
         <Route path='/signup' component={SignUpForm} />
+        <Route path='/restaurants/:name' render={({ match }) => {
+          return <RestaurantDetails name={match.params.name} />;
+        }} />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 export const fetchRestaurantData = async (key, location) => {
   const corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com/';
-  const url = `${corsAnywhereUrl}https://api.yelp.com/v3/businesses/search?location=${location}&categories=bbq&limit=20`;
+  const url = `${corsAnywhereUrl}https://api.yelp.com/v3/businesses/search?location=${location}&categories=bbq&limit=3`;
   const response = await fetch(url, {
     method: 'GET',
     headers: {
