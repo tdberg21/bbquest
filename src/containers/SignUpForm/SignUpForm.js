@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import connect from 'react-redux';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { signUpUser } from '../../helpers/apiCalls';
 import './SignUpForm.css';
+import { loginUser } from '../../actions';
 
 
-export default class SignUpForm extends Component {
+export class SignUpForm extends Component {
   constructor () {
     super();
 
@@ -29,6 +30,8 @@ export default class SignUpForm extends Component {
 
     const results = await signUpUser(username, email, password);
     console.log(results);
+    this.props.loginUser(username, results.id);
+    this.props.history.push('/search');
   }
 
   render () {
@@ -82,3 +85,9 @@ export default class SignUpForm extends Component {
     );
   }
 }
+
+export const mapDispatchToProps = dispatch => ({
+  loginUser: (username, id) => dispatch(loginUser(username, id))
+});
+
+export default connect(null, mapDispatchToProps)(SignUpForm);

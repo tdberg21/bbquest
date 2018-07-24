@@ -99,7 +99,7 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    loginUser: (username, password) => dispatch(loginUser(username, password)),
+    loginUser: (username, id) => dispatch(loginUser(username, id)),
     addVisited: (visited) => dispatch(addVisited(visited))
   };
 };
