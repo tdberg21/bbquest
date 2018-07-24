@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { loginUser, addVisited } from '../../actions';
-import { fetchUser, fetchVisitedRestaurants } from '../../helpers/apiCalls';
-import './LoginForm.css';
+import { signUpUser } from '../../helpers/apiCalls';
+import './SignUpForm.css';
+import { loginUser } from '../../actions';
 
-export class LoginForm extends Component {
-  constructor() {
+
+export class SignUpForm extends Component {
+  constructor () {
     super();
 
     this.state = {
@@ -26,29 +27,21 @@ export class LoginForm extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     const { username, email, password } = this.state;
-    const results = await fetchUser(username, email, password);
-    const visited = await fetchVisitedRestaurants(results.id);
-    this.props.loginUser(results.username, results.id);
-    this.props.addVisited(visited);
+
+    const results = await signUpUser(username, email, password);
+    console.log(results);
+    this.props.loginUser(username, results.id);
     this.props.history.push('/search');
   }
 
-  resetState = () => {
-    this.setState({
-      username: '',
-      email: '',
-      password: ''
-    });
-  }
-
-  render() {
+  render () {
     return (
-      <div className='login-form-container'>
-        <form 
+      <div className='signup-form-container'>
+        <form
           className='login-form'
           onSubmit={this.handleSubmit}
         >
-          <h3 className='form-header'>Please login to search and track barbecue!</h3>
+          <h3 className='signup-form-header'>Please signup to search and track barbecue!</h3>
           <div className='inputs'>
             <input
               className='username-field'
@@ -78,14 +71,14 @@ export class LoginForm extends Component {
               onChange={this.handleChange}
             />
             <button
-              className='login-button'
-              aria-label='Sign in to your account'
+              className='signup-button'
+              aria-label='Sign up your account'
             >
-              Login
+              Signup
             </button>
           </div>
-          <Link to='/signup'>
-            Don't have an account?
+          <Link to='/login'>
+            Already have an account?
           </Link>
         </form>
       </div>
@@ -93,15 +86,8 @@ export class LoginForm extends Component {
   }
 }
 
-export const mapStateToProps = (state) => ({
-  username: state.user.username
+export const mapDispatchToProps = dispatch => ({
+  loginUser: (username, id) => dispatch(loginUser(username, id))
 });
 
-export const mapDispatchToProps = (dispatch) => {
-  return {
-    loginUser: (username, id) => dispatch(loginUser(username, id)),
-    addVisited: (visited) => dispatch(addVisited(visited))
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+export default connect(null, mapDispatchToProps)(SignUpForm);
