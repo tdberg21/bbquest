@@ -15,11 +15,30 @@
 .inputs {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 80%;
   margin: auto;
+  
+}
+
+.input-fields {
+  color: #BBBDBF;
+  display: block;
+  font-size: 1em;
+  font-weight: 200;
+  margin: 0.5rem auto;
+  padding: .5rem;
+  width: 80%;
+  height: 0.75em;
 }
 
 .form-header {
   margin-top: 0;
   margin-bottom: 0.5rem;
+}
+
+.login-button {
+  background-color: #333;
+  color: #fff;
+  width: 86%;
+  margin: 0 auto;
 }

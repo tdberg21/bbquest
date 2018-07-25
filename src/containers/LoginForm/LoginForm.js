@@ -51,7 +51,7 @@ export class LoginForm extends Component {
           <h3 className='form-header'>Please login to search and track barbecue!</h3>
           <div className='inputs'>
             <input
-              className='username-field'
+              className='username-field input-fields'
               aria-label='Please Enter Your Username'
               placeholder='username'
               type='text'
@@ -60,7 +60,7 @@ export class LoginForm extends Component {
               onChange={this.handleChange}
             />
             <input
-              className='email-field'
+              className='email-field input-fields'
               aria-label='Please Enter Your Email'
               placeholder='email'
               type='text'
@@ -69,7 +69,7 @@ export class LoginForm extends Component {
               onChange={this.handleChange}
             />
             <input
-              className='password-field'
+              className='password-field input-fields'
               aria-label='Please Enter Your Password'
               placeholder='password'
               type='password'
