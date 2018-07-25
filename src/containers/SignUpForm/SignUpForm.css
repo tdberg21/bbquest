@@ -3,6 +3,7 @@
   height: 100vw;
   padding-top: 1rem;
   width: 101%;
+  background-size: contain;
 }
 
 .signup-form-header {
