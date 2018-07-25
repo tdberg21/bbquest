@@ -15,7 +15,7 @@ export default class Header extends Component {
       <header className='header'>
         <div className='logo-container'>
           <img src={logo} className='logo' alt='BBQuest Logo' />
-          <h2 className='title'>BBQuest</h2>
+          <h2 className='title'>BBQ Tour of North America</h2>
         </div>
         <ul className='navigation-links'>
           <li>
