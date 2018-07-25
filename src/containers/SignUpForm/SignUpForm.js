@@ -41,7 +41,7 @@ export class SignUpForm extends Component {
           className='login-form'
           onSubmit={this.handleSubmit}
         >
-          <h3 className='form-header'>Please signup to search and track barbecue!</h3>
+          <h3 className='form-header'>Signup to search and track barbecue!</h3>
           <div className='inputs'>
             <input
               className='username-field input-fields'

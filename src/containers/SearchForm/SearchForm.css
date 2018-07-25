@@ -11,8 +11,6 @@
   width: 50%;
   display: flex;
   justify-content: center;
-  position: relative;
-  top: -94px;
 }
 
 .location-field {

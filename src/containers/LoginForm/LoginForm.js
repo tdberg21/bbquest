@@ -50,7 +50,7 @@ export class LoginForm extends Component {
             className='login-form'
             onSubmit={this.handleSubmit}
           >
-            <h3 className='form-header'>Please login to search and track barbecue!</h3>
+            <h3 className='form-header'>Login to search and track barbecue!</h3>
             <div className='inputs'>
               <input
                 className='username-field input-fields'
