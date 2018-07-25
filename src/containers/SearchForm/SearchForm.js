@@ -4,6 +4,7 @@ import { fetchRestaurantData } from '../../helpers/apiCalls';
 import { apiKey } from '../../helpers/apiKey';
 import { scrubRestaurants } from '../../helpers/dataCleaners';
 import { addRestaurants } from '../../actions';
+import './SearchForm.css';
 
 
 export class SearchForm extends Component {
@@ -36,7 +37,7 @@ export class SearchForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className='search-form-container'>
         <form
           className='search-form'
           onSubmit={this.handleSubmit}

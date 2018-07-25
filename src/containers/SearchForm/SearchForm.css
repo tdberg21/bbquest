@@ -1,0 +1,36 @@
+.search-form-container {
+  background-image: url(https://www.pigrigbbq.com/files/2017-02/background.jpg);
+  height: 100vh;
+  padding-top: 1rem;
+  width: 101%;
+  background-size: cover;
+}
+
+.search-form {
+  margin: 2rem auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -94px;
+}
+
+.location-field {
+  width: 60%;
+  height: 1rem;
+  color: #333;
+  font-size: 1em;
+  font-weight: 500;
+  padding: .5rem;
+  border: none;
+}
+
+.submit-location-button {
+  height: 2rem;
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1em;
+
+}

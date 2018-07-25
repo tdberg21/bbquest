@@ -3,6 +3,7 @@
   height: 100vh;
   padding-top: 1rem;
   width: 101%;
+  background-size: cover;
 }
 
 .login-form {
@@ -16,8 +17,7 @@
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin: auto;
-  
+  margin: auto; 
 }
 
 .input-fields {
