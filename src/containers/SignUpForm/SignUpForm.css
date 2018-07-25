@@ -1,7 +1,8 @@
 .signup-form-container {
-  background-image: url(https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.bbq-fest.com%2Fbbqfest2015%2Fwp-content%2Fuploads%2F2013%2F02%2Fbackground6.jpg&f=1);
+  background-image: url(https://proxy.duckduckgo.com/iur/?f=1&image_host=http%3A%2F%2Fimages.alphacoders.com%2F280%2F280993.jpg&u=https://images.alphacoders.com/280/280993.jpg);
   height: 100vw;
   padding-top: 1rem;
+  width: 101%;
 }
 
 .signup-form-header {

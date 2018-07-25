@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 const Card = (props) => {
   return(
     <div className="card">
-      <Link to={`/restaurant/${props.name}`} >
+      <Link to={`/restaurants/${props.name}`} >
         <h3>{props.name}</h3>
-        <img src={props.image} alt="restaurant picture" height="200px"/>
+        <img src={props.image} alt="restaurant" height="200px"/>
       </Link>
     </div>
   );

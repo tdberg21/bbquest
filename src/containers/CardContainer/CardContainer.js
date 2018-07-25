@@ -18,7 +18,6 @@ export class CardContainer extends Component {
   }
 }
 
-
 export const mapStateToProps = state => ({
   restaurants: state.restaurants
 });
