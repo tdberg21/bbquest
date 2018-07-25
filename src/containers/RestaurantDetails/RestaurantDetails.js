@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchDetails } from '../../helpers/apiCalls';
+import { Link } from 'react-router-dom';
 
 export class RestaurantDetails extends Component {
   constructor () {
@@ -34,6 +35,8 @@ export class RestaurantDetails extends Component {
         <p> {this.state.results.reviews[1].text} </p>
         <p> {this.state.results.reviews[2].text} </p>
         <a href={this.props.url} target="_blank">Visit on Yelp!</a>
+        <br/>
+        <Link to={'/restaurants/'}>Back</Link>
       </div>
     );
   }

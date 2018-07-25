@@ -36,15 +36,15 @@ export class SignUpForm extends Component {
 
   render () {
     return (
-      <div className='signup-form-container'>
+      <div className='login-form-container'>
         <form
           className='login-form'
           onSubmit={this.handleSubmit}
         >
-          <h3 className='signup-form-header'>Please signup to search and track barbecue!</h3>
+          <h3 className='form-header'>Please signup to search and track barbecue!</h3>
           <div className='inputs'>
             <input
-              className='username-field'
+              className='username-field input-fields'
               aria-label='Please Enter Your Username'
               placeholder='username'
               type='text'
@@ -53,7 +53,7 @@ export class SignUpForm extends Component {
               onChange={this.handleChange}
             />
             <input
-              className='email-field'
+              className='email-field input-fields'
               aria-label='Please Enter Your Email'
               placeholder='email'
               type='text'
@@ -62,7 +62,7 @@ export class SignUpForm extends Component {
               onChange={this.handleChange}
             />
             <input
-              className='password-field'
+              className='password-field input-fields'
               aria-label='Please Enter Your Password'
               placeholder='password'
               type='password'
@@ -71,7 +71,7 @@ export class SignUpForm extends Component {
               onChange={this.handleChange}
             />
             <button
-              className='signup-button'
+              className='login-button'
               aria-label='Sign up your account'
             >
               Signup
