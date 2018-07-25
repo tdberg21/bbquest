@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { fetchDetails } from '../../helpers/apiCalls';
 import { Link } from 'react-router-dom';
+import './RestaurantDetails.css';
 
 export class RestaurantDetails extends Component {
   constructor () {
