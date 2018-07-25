@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { loginUser, addVisited } from '../../actions';
 import { fetchUser, fetchVisitedRestaurants } from '../../helpers/apiCalls';
 import './LoginForm.css';
+import SearchForm from '../SearchForm/SearchForm';
 
 export class LoginForm extends Component {
   constructor() {
@@ -42,54 +43,62 @@ export class LoginForm extends Component {
   }
 
   render() {
-    return (
-      <div className='login-form-container'>
-        <form 
-          className='login-form'
-          onSubmit={this.handleSubmit}
-        >
-          <h3 className='form-header'>Please login to search and track barbecue!</h3>
-          <div className='inputs'>
-            <input
-              className='username-field input-fields'
-              aria-label='Please Enter Your Username'
-              placeholder='username'
-              type='text'
-              name='username'
-              value={this.state.username}
-              onChange={this.handleChange}
-            />
-            <input
-              className='email-field input-fields'
-              aria-label='Please Enter Your Email'
-              placeholder='email'
-              type='text'
-              name='email'
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-            <input
-              className='password-field input-fields'
-              aria-label='Please Enter Your Password'
-              placeholder='password'
-              type='password'
-              name='password'
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-            <button
-              className='login-button'
-              aria-label='Sign in to your account'
-            >
-              Login
-            </button>
-          </div>
-          <Link to='/signup'>
-            Don't have an account?
-          </Link>
-        </form>
-      </div>
-    );
+    if (!this.props.username) {
+      return (
+        <div className='login-form-container'>
+          <form 
+            className='login-form'
+            onSubmit={this.handleSubmit}
+          >
+            <h3 className='form-header'>Login to search and track barbecue!</h3>
+            <div className='inputs'>
+              <input
+                className='username-field input-fields'
+                aria-label='Please Enter Your Username'
+                placeholder='username'
+                type='text'
+                name='username'
+                value={this.state.username}
+                onChange={this.handleChange}
+              />
+              <input
+                className='email-field input-fields'
+                aria-label='Please Enter Your Email'
+                placeholder='email'
+                type='text'
+                name='email'
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
+              <input
+                className='password-field input-fields'
+                aria-label='Please Enter Your Password'
+                placeholder='password'
+                type='password'
+                name='password'
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
+              <button
+                className='login-button'
+                aria-label='Sign in to your account'
+              >
+                Login
+              </button>
+            </div>
+            <Link to='/signup'>
+              Don't have an account?
+            </Link>
+          </form>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <SearchForm />
+        </div>
+      );
+    }
   }
 }
 

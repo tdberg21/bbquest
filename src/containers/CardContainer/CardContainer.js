@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from '../../components/Card/Card';
 import './CardContainer.css';
+import SearchForm from '../SearchForm/SearchForm';
 
 export class CardContainer extends Component {
 
@@ -15,7 +16,7 @@ export class CardContainer extends Component {
         {this.restaurantsToDisplay(this.props.restaurants)}
       </div>
     );
-  }
+  } 
 }
 
 export const mapStateToProps = state => ({

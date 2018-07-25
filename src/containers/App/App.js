@@ -29,6 +29,7 @@ export class App extends Component {
         <Header />
         <Route path='/login' component={LoginForm} />
         <Route path='/search' component={SearchForm} />
+        <Route exact path='/' component={SearchForm} />
         <Route exact path='/restaurants' component={CardContainer} />
         <Route path='/signup' component={SignUpForm} />
         <Route path='/restaurants/:name' render={({ match }) => {

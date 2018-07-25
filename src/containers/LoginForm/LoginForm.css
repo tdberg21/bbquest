@@ -1,5 +1,5 @@
 .login-form-container {
-  background-image: url(https://proxy.duckduckgo.com/iur/?f=1&image_host=http%3A%2F%2Fimages.alphacoders.com%2F280%2F280993.jpg&u=https://images.alphacoders.com/280/280993.jpg);
+  background-image: url(https://www.pigrigbbq.com/files/2017-02/background.jpg);
   height: 100vh;
   padding-top: 1rem;
   width: 101%;
@@ -9,22 +9,23 @@
 .login-form {
   background-color: #fff;
   margin: auto;
-  width: 50%;
-  height: 25rem;
+  width: 40%;
+  height: 16rem;
+  padding: 1rem;
 }
 
 .inputs {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 75%;
   margin: auto; 
 }
 
 .input-fields {
-  color: #BBBDBF;
+  color: #333;
   display: block;
   font-size: 1em;
-  font-weight: 200;
+  font-weight: 300;
   margin: 0.5rem auto;
   padding: .5rem;
   width: 80%;
@@ -32,13 +33,13 @@
 }
 
 .form-header {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem auto;
+  font-size: 1rem;
 }
 
 .login-button {
   background-color: #333;
   color: #fff;
-  width: 86%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 0.7rem auto;
 }

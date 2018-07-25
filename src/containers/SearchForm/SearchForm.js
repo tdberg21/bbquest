@@ -25,6 +25,7 @@ export class SearchForm extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
+    this.props.history.push('/restaurants');
     const restaurants = await fetchRestaurantData(apiKey, this.state.location);
     const cleanRestaurants = scrubRestaurants(restaurants);
     this.addRestaurantsToStore(cleanRestaurants);
@@ -32,7 +33,6 @@ export class SearchForm extends Component {
 
   addRestaurantsToStore = (restaurants) => {
     this.props.addRestaurants(restaurants);
-    this.props.history.push('/restaurants');
   }
 
   render() {
