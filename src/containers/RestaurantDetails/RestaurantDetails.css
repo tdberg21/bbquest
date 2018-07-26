@@ -1,10 +1,19 @@
 .restaurant-details-container {
-  width: 60%;
-  margin: auto;
+  display: flex;
 }
 
 .reviews {
   margin: 2rem auto;
+}
+
+.reviews-section {
+  width: 40%;
+  padding: 0.83em;
+  text-align: left;
+}
+.details-section {
+  padding-left: 2em;
+  width: 60%;
 }
 
 .visited-button {
