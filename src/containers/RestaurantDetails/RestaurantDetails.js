@@ -30,6 +30,7 @@ export class RestaurantDetails extends Component {
     
     return (
       <div className='restaurant-details-container'>
+        <section className='details-section'>
         <h2>{this.props.name}</h2>
         <img src={this.props.image} alt="restaurant" height="200px" />
         <br/>
@@ -42,10 +43,14 @@ export class RestaurantDetails extends Component {
           className='visited-button'
           onClick={() => this.checkVisited(this.props.id)}
           >Mark As Visited</button>
-        <p className='reviews'> {this.state.results.reviews[0].text} </p>
-        <p className='reviews'> {this.state.results.reviews[1].text} </p>
-        <p className='reviews'> {this.state.results.reviews[2].text} </p>
+        </section>
+        <section className='reviews-section'>
+        <h6>Reviews:</h6>
+        <p className='reviews'> "{this.state.results.reviews[0].text}" </p>
+        <p className='reviews'> "{this.state.results.reviews[1].text}" </p>
+        <p className='reviews'> "{this.state.results.reviews[2].text}" </p>
         <Link to={'/restaurants/'}>Back</Link>
+        </section>
       </div>
     );
   }
