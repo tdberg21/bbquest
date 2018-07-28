@@ -13,6 +13,7 @@ import CardContainer from '../CardContainer/CardContainer';
 import SearchForm from '../SearchForm/SearchForm';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import RestaurantDetails from '../RestaurantDetails/RestaurantDetails';
+import VisitedForm from '../VisitedForm/VisitedForm';
 
 export class App extends Component {
 
@@ -36,6 +37,7 @@ export class App extends Component {
           let restaurant = this.props.restaurants.find(restaurant => restaurant.name === match.params.name);
           return <RestaurantDetails {...restaurant} />;
         }} />
+        <Route path='/restaurants/:name/review' component={VisitedForm}/>
       </div>
     );
   }
