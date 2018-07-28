@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from './images/pig64.png';
 
 
 export default class Header extends Component {
-  constructor () {
-    super();
-
-  }
 
   render() {
     return (
