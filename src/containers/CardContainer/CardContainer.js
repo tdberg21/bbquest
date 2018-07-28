@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from '../../components/Card/Card';
 import './CardContainer.css';
-import SearchForm from '../SearchForm/SearchForm';
 import pig from '../../pig.gif';
 
 export class CardContainer extends Component {
