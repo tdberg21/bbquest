@@ -11,6 +11,7 @@ import SignUpForm from '../SignUpForm/SignUpForm';
 import RestaurantDetails from '../RestaurantDetails/RestaurantDetails';
 import { addVisitedRestaurant } from '../../helpers/apiCalls.js';
 import VisitedForm from '../VisitedForm/VisitedForm';
+import VisitedContainer from '../VisitedContainer/VisitedContainer';
 
 export class App extends Component {
   constructor () {
@@ -52,7 +53,10 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header user={this.props.user} logOutUser={this.logOut}/>
+        <Header 
+          user={this.props.user} 
+          logOutUser={this.logOut} 
+          visited={this.props.visited} />
         <Route path='/login' component={LoginForm} />
         <Route path='/search' component={SearchForm} />
         <Route exact path='/' component={SearchForm} />
@@ -63,6 +67,7 @@ export class App extends Component {
           return <RestaurantDetails checkVisited={this.checkVisited} {...restaurant} />;
         }} />
         <Route path='/restaurants/:name/review' render={() => <VisitedForm addRestaurantToDatabase={this.addRestaurantToDatabase}/>}/>
+        <Route path='/visited' component={VisitedContainer} />
       </div>
     );
   }
