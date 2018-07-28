@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { addRestaurants, logOutUser } from '../../actions';
+import { addRestaurants, logOutUser, addVisited } from '../../actions';
 import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
 import LoginForm from '../LoginForm/LoginForm';
@@ -9,7 +9,7 @@ import CardContainer from '../CardContainer/CardContainer';
 import SearchForm from '../SearchForm/SearchForm';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import RestaurantDetails from '../RestaurantDetails/RestaurantDetails';
-import { addVisitedRestaurant } from '../../helpers/apiCalls.js';
+import { addVisitedRestaurant, fetchVisitedRestaurants } from '../../helpers/apiCalls.js';
 import VisitedForm from '../VisitedForm/VisitedForm';
 import VisitedContainer from '../VisitedContainer/VisitedContainer';
 
@@ -39,6 +39,8 @@ export class App extends Component {
     const jointToSave = await this.findRestaurant(this.state.yelpId);
     const results = await addVisitedRestaurant(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId);
     console.log(results);
+    const visited = await fetchVisitedRestaurants(this.props.user.id);
+    this.props.addVisited(visited);
   }
 
   findRestaurant = yelpId => {
@@ -46,7 +48,6 @@ export class App extends Component {
   }
 
   logOut = () => {
-    console.log('LOGOUT');
     this.props.logOut();
   }
 
@@ -81,7 +82,8 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   addRestaurants: (restaurants) => dispatch(addRestaurants(restaurants)),
-  logOut: () => dispatch(logOutUser())
+  logOut: () => dispatch(logOutUser()),
+  addVisited: (visited) => dispatch(addVisited(visited))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

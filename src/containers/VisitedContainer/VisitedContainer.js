@@ -8,6 +8,10 @@ export class VisitedContainer extends Component {
       return (
         <div className='visited-card'>
         <h3>{joint.restaurant_name}</h3>
+        <p> rating: {joint.rating}</p>
+        <p> date visited: {joint.date}</p>
+        <p> meal: {joint.meal} </p>
+        <p> notes: {joint.notes} </p>
         </div>
       )
     });
