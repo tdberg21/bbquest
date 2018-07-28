@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { addRestaurants, logOutUser } from '../../actions';
+import { addRestaurants, logOutUser, addVisited } from '../../actions';
 import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
 import LoginForm from '../LoginForm/LoginForm';
@@ -9,8 +9,9 @@ import CardContainer from '../CardContainer/CardContainer';
 import SearchForm from '../SearchForm/SearchForm';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import RestaurantDetails from '../RestaurantDetails/RestaurantDetails';
-import { addVisitedRestaurant } from '../../helpers/apiCalls.js';
+import { addVisitedRestaurant, fetchVisitedRestaurants } from '../../helpers/apiCalls.js';
 import VisitedForm from '../VisitedForm/VisitedForm';
+import VisitedContainer from '../VisitedContainer/VisitedContainer';
 
 export class App extends Component {
   constructor () {
@@ -38,6 +39,8 @@ export class App extends Component {
     const jointToSave = await this.findRestaurant(this.state.yelpId);
     const results = await addVisitedRestaurant(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId);
     console.log(results);
+    const visited = await fetchVisitedRestaurants(this.props.user.id);
+    this.props.addVisited(visited);
   }
 
   findRestaurant = yelpId => {
@@ -45,14 +48,17 @@ export class App extends Component {
   }
 
   logOut = () => {
-    console.log('LOGOUT');
     this.props.logOut();
+    this.props.addVisited({});
   }
 
   render() {
     return (
       <div className="App">
-        <Header user={this.props.user} logOutUser={this.logOut}/>
+        <Header 
+          user={this.props.user} 
+          logOutUser={this.logOut} 
+          visited={this.props.visited} />
         <Route path='/login' component={LoginForm} />
         <Route path='/search' component={SearchForm} />
         <Route exact path='/' component={SearchForm} />
@@ -63,6 +69,7 @@ export class App extends Component {
           return <RestaurantDetails checkVisited={this.checkVisited} {...restaurant} />;
         }} />
         <Route path='/restaurants/:name/review' render={() => <VisitedForm addRestaurantToDatabase={this.addRestaurantToDatabase}/>}/>
+        <Route path='/visited' component={VisitedContainer} />
       </div>
     );
   }
@@ -76,7 +83,8 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   addRestaurants: (restaurants) => dispatch(addRestaurants(restaurants)),
-  logOut: () => dispatch(logOutUser())
+  logOut: () => dispatch(logOutUser()),
+  addVisited: (visited) => dispatch(addVisited(visited))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

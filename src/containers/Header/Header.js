@@ -16,6 +16,11 @@ export default class Header extends Component {
         <h5 className='user-name'>{this.props.user.username ? `Welcome ${this.props.user.username}!` : ''}</h5>
         <ul className='navigation-links'>
           <li>
+            <NavLink className='visited-link nav-links' to='/visited'>
+              {this.props.visited.length ? 'Visited' : ''}
+            </NavLink>
+          </li>
+          <li>
             <NavLink className='home-link nav-links' to='/'>
               Search
             </NavLink>
@@ -25,6 +30,7 @@ export default class Header extends Component {
               {this.props.user.username ? <a className='log-out' onClick={this.props.logOutUser}>Logout</a> : 'Login'}
             </NavLink>
           </li>
+          
         </ul>
       </header>
     );
