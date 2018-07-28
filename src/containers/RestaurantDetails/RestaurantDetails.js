@@ -3,6 +3,7 @@ import { fetchDetails } from '../../helpers/apiCalls';
 import { withRouter, Link } from 'react-router-dom';
 import './RestaurantDetails.css';
 import { connect } from 'react-redux';
+import pig from '../../pig.gif';
 
 export class RestaurantDetails extends Component {
   constructor () {
@@ -23,12 +24,12 @@ export class RestaurantDetails extends Component {
   }
 
   checkVisited = (id) => {
-    this.props.history.push('/review')
+    this.props.history.push('/review');
   }
   
   render () {
-    
-    return (
+    if (this.state.results.reviews[0].text !== '') {
+return (
       <div className='restaurant-details-container'>
         <section className='details-section'>
         <h2>{this.props.name}</h2>
@@ -53,6 +54,16 @@ export class RestaurantDetails extends Component {
         </section>
       </div>
     );
+
+    } else {
+      return (
+        <div className='restaurant-details-container'>
+        <img src={pig} alt='loading gif' />
+        </div>
+
+      )
+    }
+    
   }
 }
 
