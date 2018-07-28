@@ -29,7 +29,8 @@ export class VisitedForm extends Component {
   }
 
   render() {
-    return (
+    if (this.props.user) {
+      return (
       <div className='visited-form-container'>
         <form className='visited-form'>
           <div className='inputs'>
@@ -80,7 +81,18 @@ export class VisitedForm extends Component {
         </form>
       </div>
     );
+
+    } else {
+      return (
+        <div> Please Sign In! </div>
+      )
+    }
+
   }
 }
 
-export default withRouter(VisitedForm);
+export const mapStateToProps = (state) => ({
+  user: state.user
+})
+
+export default withRouter(connect(mapStateToProps, null)(VisitedForm));
