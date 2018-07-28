@@ -9,6 +9,10 @@ export const loginUser = (username, id) => ({
   id
 });
 
+export const logOutUser = () => ({
+  type: 'LOGOUT_USER'
+});
+
 export const addVisited = (visited) => ({
   type: 'ADD_VISITED',
   visited

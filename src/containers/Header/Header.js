@@ -23,7 +23,7 @@ export default class Header extends Component {
           </li>
           <li>
             <NavLink className='login-link nav-links' to='/login'>
-              {this.props.user.username ? 'Logout' : 'Login'}
+              {this.props.user.username ? <a className='log-out' onClick={this.props.logOutUser}>Logout</a> : 'Login'}
             </NavLink>
           </li>
         </ul>
