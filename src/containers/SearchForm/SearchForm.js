@@ -5,7 +5,6 @@ import { apiKey } from '../../helpers/apiKey';
 import { scrubRestaurants } from '../../helpers/dataCleaners';
 import { addRestaurants } from '../../actions';
 import './SearchForm.css';
-// import { mockResponse } from '../../helpers/mockdata';
 
 
 

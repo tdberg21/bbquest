@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { addRestaurants } from '../../actions';
+import { addRestaurants, logOutUser } from '../../actions';
 import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
 import LoginForm from '../LoginForm/LoginForm';
@@ -44,10 +44,15 @@ export class App extends Component {
     return this.props.restaurants.find(restaurant => restaurant.id === yelpId);
   }
 
+  logOut = () => {
+    console.log('LOGOUT');
+    this.props.logOut();
+  }
+
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header user={this.props.user} logOutUser={this.logOut}/>
         <Route path='/login' component={LoginForm} />
         <Route path='/search' component={SearchForm} />
         <Route exact path='/' component={SearchForm} />
@@ -70,7 +75,8 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  addRestaurants: (restaurants) => dispatch(addRestaurants(restaurants))
+  addRestaurants: (restaurants) => dispatch(addRestaurants(restaurants)),
+  logOut: () => dispatch(logOutUser())
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

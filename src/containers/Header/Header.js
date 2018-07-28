@@ -13,7 +13,7 @@ export default class Header extends Component {
           <img src={logo} className='logo' alt='BBQuest Logo' />
           <h2 className='title'>BBQuest</h2>
         </div>
-        {/* <p className='user-name'>{this.props.users.name ? `Welcome ${this.props.users.name}!!` : ''}</p> */}
+        <h5 className='user-name'>{this.props.user.username ? `Welcome ${this.props.user.username}!` : ''}</h5>
         <ul className='navigation-links'>
           <li>
             <NavLink className='home-link nav-links' to='/'>
@@ -22,7 +22,7 @@ export default class Header extends Component {
           </li>
           <li>
             <NavLink className='login-link nav-links' to='/login'>
-               Login
+              {this.props.user.username ? <a className='log-out' onClick={this.props.logOutUser}>Logout</a> : 'Login'}
             </NavLink>
           </li>
         </ul>
