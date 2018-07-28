@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 
 export class VisitedForm extends Component {
@@ -83,7 +83,9 @@ export class VisitedForm extends Component {
       );
     } else {
       return (
-        <div> Please Sign In! </div>
+        <div> Please Sign In! 
+          <Link to={'/login/'}>Login Page</Link>
+        </div>
       );
     }
 
