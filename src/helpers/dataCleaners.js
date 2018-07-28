@@ -1,7 +1,7 @@
 export const scrubRestaurants =(response) => (
   response.businesses.map((business) => {
     return {
-      name: business.name,
+      name: business.name.replace(/&/, 'and'),
       id: business.id,
       rating: business.rating,
       price: business.price,
