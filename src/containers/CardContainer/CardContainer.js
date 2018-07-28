@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from '../../components/Card/Card';
 import './CardContainer.css';
-import SearchForm from '../SearchForm/SearchForm';
+import pig from '../../pig.gif';
 
 export class CardContainer extends Component {
 
@@ -11,11 +11,20 @@ export class CardContainer extends Component {
   })
 
   render() {
-    return (
-      <div className="card-container">
-        {this.restaurantsToDisplay(this.props.restaurants)}
-      </div>
-    );
+    if (this.props.restaurants.length > 0) {
+      return (
+        <div className='card-container'>
+          {this.restaurantsToDisplay(this.props.restaurants)}
+        </div>
+      );
+    } else {
+      return (
+        <div className='card-container'>
+          <img src={pig} alt='pig loading gif' />
+        </div>
+      );
+    }
+    
   } 
 }
 

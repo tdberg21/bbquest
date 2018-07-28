@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import { fetchRestaurantData } from './helpers/apiCalls';
-// import { apiKey } from './helpers/apiKey';
-import { mockResponse } from '../../helpers/mockdata';
-import { scrubRestaurants } from '../../helpers/dataCleaners';
 import { addRestaurants } from '../../actions';
 import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
@@ -13,15 +9,40 @@ import CardContainer from '../CardContainer/CardContainer';
 import SearchForm from '../SearchForm/SearchForm';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import RestaurantDetails from '../RestaurantDetails/RestaurantDetails';
+import { addVisitedRestaurant } from '../../helpers/apiCalls.js';
+import VisitedForm from '../VisitedForm/VisitedForm';
 
 export class App extends Component {
+  constructor () {
+    super();
 
-  // componentDidMount = async () => {
-  //   // const restaurants = await fetchRestaurantData(apiKey);
-  //   const cleanRestaurants = scrubRestaurants(mockResponse);
-  //   this.props.addRestaurants(cleanRestaurants);
-  //   console.log(cleanRestaurants);
-  // }
+    this.state = {
+      yelpId : ''
+    };
+  }
+
+  checkVisited = (yelpId) => {
+    const duplicate = this.props.visited.find(visited => {
+      return visited.yelpId === yelpId;
+    });
+    if (duplicate) {
+      this.props.history.push('/restaurants/');
+    } else {
+      this.setState({
+        yelpId
+      });
+    }
+  }
+
+  addRestaurantToDatabase = async (rating, notes, date, meal) => {
+    const jointToSave = await this.findRestaurant(this.state.yelpId);
+    const results = await addVisitedRestaurant(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId);
+    console.log(results);
+  }
+
+  findRestaurant = yelpId => {
+    return this.props.restaurants.find(restaurant => restaurant.id === yelpId);
+  }
 
   render() {
     return (
@@ -34,15 +55,18 @@ export class App extends Component {
         <Route path='/signup' component={SignUpForm} />
         <Route path='/restaurants/:name' render={({ match }) => {
           let restaurant = this.props.restaurants.find(restaurant => restaurant.name === match.params.name);
-          return <RestaurantDetails {...restaurant} />;
+          return <RestaurantDetails checkVisited={this.checkVisited} {...restaurant} />;
         }} />
+        <Route path='/restaurants/:name/review' render={() => <VisitedForm addRestaurantToDatabase={this.addRestaurantToDatabase}/>}/>
       </div>
     );
   }
 }
 
 export const mapStateToProps = (state) => ({
-  restaurants: state.restaurants
+  restaurants: state.restaurants,
+  user: state.user,
+  visited: state.visited
 });
 
 export const mapDispatchToProps = (dispatch) => ({
