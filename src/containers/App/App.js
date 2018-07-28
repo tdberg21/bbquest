@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import { fetchRestaurantData } from './helpers/apiCalls';
-// import { apiKey } from './helpers/apiKey';
-import { mockResponse } from '../../helpers/mockdata';
-import { scrubRestaurants } from '../../helpers/dataCleaners';
 import { addRestaurants } from '../../actions';
 import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
@@ -22,39 +18,30 @@ export class App extends Component {
 
     this.state = {
       yelpId : ''
-    }
+    };
   }
 
-  // componentDidMount = async () => {
-  //   // const restaurants = await fetchRestaurantData(apiKey);
-  //   const cleanRestaurants = scrubRestaurants(mockResponse);
-  //   this.props.addRestaurants(cleanRestaurants);
-  //   console.log(cleanRestaurants);
-  // }
-
   checkVisited = (yelpId) => {
-    console.log(yelpId, this.props.user.id);
-    const jointToSave = this.findRestaurant(yelpId);
-    const duplicate = this.props.visited.find(visited => visited.yelpId === yelpId)
+    const duplicate = this.props.visited.find(visited => {
+      return visited.yelpId === yelpId;
+    });
     if (duplicate) {
-      console.log('DUPLICATE')
       this.props.history.push('/restaurants/');
     } else {
       this.setState({
         yelpId
-      })
+      });
     }
   }
 
   addRestaurantToDatabase = async (rating, notes, date, meal) => {
     const jointToSave = await this.findRestaurant(this.state.yelpId);
-    // console.log(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId)
-    const results = await addVisitedRestaurant(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId)
+    const results = await addVisitedRestaurant(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId);
     console.log(results);
   }
 
   findRestaurant = yelpId => {
-    return this.props.restaurants.find(restaurant => restaurant.id === yelpId)
+    return this.props.restaurants.find(restaurant => restaurant.id === yelpId);
   }
 
   render() {
