@@ -47,7 +47,7 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header user={this.props.user}/>
         <Route path='/login' component={LoginForm} />
         <Route path='/search' component={SearchForm} />
         <Route exact path='/' component={SearchForm} />
