@@ -49,6 +49,7 @@ export class App extends Component {
 
   logOut = () => {
     this.props.logOut();
+    this.props.addVisited({});
   }
 
   render() {
