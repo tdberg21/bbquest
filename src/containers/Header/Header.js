@@ -7,7 +7,6 @@ import logo from './images/pig64.png';
 export default class Header extends Component {
 
   render() {
-    console.log(this.props.user);
     return (
       <header className='header'>
         <div className='logo-container'>

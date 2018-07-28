@@ -5,7 +5,6 @@ import { apiKey } from '../../helpers/apiKey';
 import { scrubRestaurants } from '../../helpers/dataCleaners';
 import { addRestaurants } from '../../actions';
 import './SearchForm.css';
-import { mockResponse } from '../../helpers/mockdata';
 
 
 
@@ -28,9 +27,9 @@ export class SearchForm extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     this.props.history.push('/restaurants');
-    const cleanRestaurants = scrubRestaurants(mockResponse);
-    this.addRestaurantsToStore(cleanRestaurants);
     const restaurants = await fetchRestaurantData(apiKey, this.state.location);
+    const cleanRestaurants = scrubRestaurants(restaurants);
+    this.addRestaurantsToStore(cleanRestaurants);
   }
 
   addRestaurantsToStore = (restaurants) => {
