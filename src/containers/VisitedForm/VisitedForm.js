@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 
 export class VisitedForm extends Component {
@@ -7,9 +9,23 @@ export class VisitedForm extends Component {
 
     this.state = {
       meal: '',
+      rating: '',
       notes: '',
       date: ''
     };
+  }
+
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.addRestaurantToDatabase(this.state.rating, this.state.notes, this.state.date, this.state.meal)
+    this.props.history.goBack();
   }
 
   render() {
@@ -24,6 +40,15 @@ export class VisitedForm extends Component {
               type='text'
               name='meal'
               value={this.state.meal}
+              onChange={this.handleChange}
+            />
+            <input
+              className='rating-field input-fields'
+              aria-label='Please Enter a rating out of 10'
+              placeholder='Enter your rating!'
+              type='number'
+              name='rating'
+              value={this.state.rating}
               onChange={this.handleChange}
             />
             <input
@@ -47,9 +72,10 @@ export class VisitedForm extends Component {
             <button
               className='visit-button'
               aria-label='Submit review'
+              onClick={this.handleSubmit}
             >
               Submit
-              </button>
+            </button>
           </div>
         </form>
       </div>
@@ -57,4 +83,4 @@ export class VisitedForm extends Component {
   }
 }
 
-export default VisitedForm;
+export default withRouter(VisitedForm);

@@ -5,7 +5,7 @@ import './RestaurantDetails.css';
 import { connect } from 'react-redux';
 import pig from '../../pig.gif';
 
-export class RestaurantDetails extends Component {
+class RestaurantDetails extends Component {
   constructor () {
     super();
     
@@ -23,7 +23,8 @@ export class RestaurantDetails extends Component {
     }
   }
 
-  checkVisited = (id) => {
+  handleVisited = (yelpId) => {
+    this.props.checkVisited(yelpId);
     this.props.history.push(`/restaurants/${this.props.name}/review`);
   }
   
@@ -42,7 +43,7 @@ export class RestaurantDetails extends Component {
             <p>Rating: {this.props.rating} /5</p>
             <button 
               className='visited-button'
-              onClick={() => this.checkVisited(this.props.id)}
+              onClick={() => this.handleVisited(this.props.id)}
             >
               Mark As Visited
             </button>
@@ -73,4 +74,4 @@ export const mapStateToProps = state => ({
   visited: state.visited
 });
 
-export default withRouter(connect(mapStateToProps)(RestaurantDetails));
+export default withRouter(connect(mapStateToProps, null)(RestaurantDetails));
