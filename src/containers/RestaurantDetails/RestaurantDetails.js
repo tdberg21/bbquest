@@ -61,7 +61,7 @@ class RestaurantDetails extends Component {
     } else {
       return (
         <div className='restaurant-details-container'>
-          <img src={pig} alt='loading gif' />
+          <img src={pig} alt='loading gif' className='pig-gif'/>
         </div>
 
       );

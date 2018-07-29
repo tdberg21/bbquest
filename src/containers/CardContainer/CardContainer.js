@@ -20,7 +20,7 @@ export class CardContainer extends Component {
     } else {
       return (
         <div className='card-container'>
-          <img src={pig} alt='pig loading gif' />
+          <img src={pig} alt='pig loading gif' className='pig-gif'/>
         </div>
       );
     }

@@ -1,6 +1,5 @@
 export const scrubRestaurants =(response) => (
   response.businesses.map((business) => {
-    console.log(business.location)
     return {
       name: business.name.replace(/&/, 'and'),
       id: business.id,
