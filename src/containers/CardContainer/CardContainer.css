@@ -2,4 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 1em;
+}
+
+.pig-gif {
+  margin: 8em auto;
 }

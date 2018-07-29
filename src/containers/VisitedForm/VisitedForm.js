@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
+import './VisitedForm.css';
 
 
 export class VisitedForm extends Component {
@@ -24,7 +25,7 @@ export class VisitedForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.addRestaurantToDatabase(this.state.rating, this.state.notes, this.state.date, this.state.meal)
+    this.props.addRestaurantToDatabase(this.state.rating, this.state.notes, this.state.date, this.state.meal);
     this.props.history.goBack();
   }
 
@@ -34,35 +35,32 @@ export class VisitedForm extends Component {
         <div className='visited-form-container'>
           <form className='visited-form'>
             <div className='inputs'>
+              <label htmlFor='meal'>What did you eat?</label>
               <input
-                className='meal-field input-fields'
+                id='meal'
+                className='meal-field visited-fields'
                 aria-label='Please Enter What You Ate'
-                placeholder='What did you eat?'
+                placeholder='Pulled pork, brisket, ribs, etc..'
                 type='text'
                 name='meal'
                 value={this.state.meal}
                 onChange={this.handleChange}
               />
+              <label htmlFor='rating'>Rating:</label>
               <input
-                className='rating-field input-fields'
+                id='rating'
+                className='rating-field visited-fields'
                 aria-label='Please Enter a rating out of 10'
-                placeholder='Enter your rating!'
+                placeholder='0 through 5'
                 type='number'
                 name='rating'
                 value={this.state.rating}
                 onChange={this.handleChange}
               />
+              <label htmlFor='date'>Date:</label>
               <input
-                className='notes-field input-fields'
-                aria-label='Please Enter Notes About Your Visit'
-                placeholder='Notes'
-                type='text'
-                name='notes'
-                value={this.state.notes}
-                onChange={this.handleChange}
-              />
-              <input
-                className='date-field input-fields'
+                id='date'
+                className='date-field visited-fields'
                 aria-label='Please Enter Your Password'
                 placeholder='date of visit'
                 type='date'
@@ -70,8 +68,18 @@ export class VisitedForm extends Component {
                 value={this.state.date}
                 onChange={this.handleChange}
               />
+              <label htmlFor='notes'>Notes:</label>
+              <input
+                id='notes'
+                className='notes-field visited-fields'
+                aria-label='Please Enter Notes About Your Visit'
+                type='text'
+                name='notes'
+                value={this.state.notes}
+                onChange={this.handleChange}
+              />
               <button
-                className='visit-button'
+                className='submit-button'
                 aria-label='Submit review'
                 onClick={this.handleSubmit}
               >
@@ -83,7 +91,8 @@ export class VisitedForm extends Component {
       );
     } else {
       return (
-        <div> Please Sign In! 
+        <div> 
+          <h3> Please Sign In! </h3>
           <Link to={'/login/'}>Login Page</Link>
         </div>
       );
@@ -94,6 +103,6 @@ export class VisitedForm extends Component {
 
 export const mapStateToProps = (state) => ({
   user: state.user
-})
+});
 
 export default withRouter(connect(mapStateToProps, null)(VisitedForm));
