@@ -7,11 +7,16 @@
 }
 
 .login-form {
-  background-color: #fff;
+  background-color: rgb(243, 243, 243, .8);
   margin: auto;
   width: 40%;
-  height: 16rem;
+  height: 18rem;
   padding: 1rem;
+}
+
+label {
+  text-align: left;
+  font-weight: 600;
 }
 
 .inputs {
@@ -29,7 +34,7 @@
   margin: 0.5rem auto;
   padding: .5rem;
   width: 80%;
-  height: 0.75em;
+  height: 0.4em;
 }
 
 .form-header {
@@ -40,6 +45,7 @@
 .login-button {
   background-color: #333;
   color: #fff;
-  width: 80%;
-  margin: 0.7rem auto;
+  width: 86%;
+  margin: 1rem auto;
+  height: 2.5em;
 }

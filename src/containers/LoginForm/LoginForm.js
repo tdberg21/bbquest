@@ -50,30 +50,32 @@ export class LoginForm extends Component {
             className='login-form'
             onSubmit={this.handleSubmit}
           >
-            <h3 className='form-header'>Login to search and track barbecue!</h3>
+            {/* <h3 className='form-header'>Login to search and track barbecue!</h3> */}
             <div className='inputs'>
+            <label for="username">Username:</label>
               <input
+                id='username'
                 className='username-field input-fields'
                 aria-label='Please Enter Your Username'
-                placeholder='username'
                 type='text'
                 name='username'
                 value={this.state.username}
                 onChange={this.handleChange}
               />
+              <label for="email">Email:</label>
               <input
+                id='email'
                 className='email-field input-fields'
                 aria-label='Please Enter Your Email'
-                placeholder='email'
                 type='text'
                 name='email'
                 value={this.state.email}
                 onChange={this.handleChange}
               />
+              <label for="password">Password:</label>
               <input
                 className='password-field input-fields'
                 aria-label='Please Enter Your Password'
-                placeholder='password'
                 type='password'
                 name='password'
                 value={this.state.password}
