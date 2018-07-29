@@ -35,7 +35,7 @@ export class VisitedForm extends Component {
         <div className='visited-form-container'>
           <form className='visited-form'>
             <div className='inputs'>
-              <label for='meal'>What did you eat?</label>
+              <label htmlFor='meal'>What did you eat?</label>
               <input
                 id='meal'
                 className='meal-field visited-fields'
@@ -46,7 +46,7 @@ export class VisitedForm extends Component {
                 value={this.state.meal}
                 onChange={this.handleChange}
               />
-              <label for='rating'>Rating:</label>
+              <label htmlFor='rating'>Rating:</label>
               <input
                 id='rating'
                 className='rating-field visited-fields'
@@ -57,7 +57,7 @@ export class VisitedForm extends Component {
                 value={this.state.rating}
                 onChange={this.handleChange}
               />
-              <label htmlFor="date">Date:</label>
+              <label htmlFor='date'>Date:</label>
               <input
                 id='date'
                 className='date-field visited-fields'
@@ -68,7 +68,7 @@ export class VisitedForm extends Component {
                 value={this.state.date}
                 onChange={this.handleChange}
               />
-              <label for='notes'>Notes:</label>
+              <label htmlFor='notes'>Notes:</label>
               <input
                 id='notes'
                 className='notes-field visited-fields'

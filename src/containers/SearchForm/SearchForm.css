@@ -8,9 +8,15 @@
 
 .search-form {
   margin: 8rem auto;
+  border: 1px solid #333;
   width: 50%;
-  display: flex;
+  /* display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center; */
+  height: 7em;
+  background-color: rgb(243, 243, 243, .8);
+  padding: 1em;
 }
 
 .location-field {
@@ -21,6 +27,7 @@
   font-weight: 500;
   padding: .5rem;
   border: none;
+  margin-top: 20px;
 }
 
 .submit-location-button {
@@ -30,5 +37,10 @@
   border: none;
   padding: 0.5rem;
   font-size: 1em;
+  margin-top: 20px;
+}
 
+.search-label {
+  font-size: 1.4rem;
+  height: 1em;
 }

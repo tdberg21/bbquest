@@ -43,7 +43,13 @@ export class SearchForm extends Component {
           className='search-form'
           onSubmit={this.handleSubmit}
         >
+          <label 
+            htmlFor='location'
+            className='search-label'>
+            Enter a city and state or zip code to find BBQ!
+          </label>
           <input
+            id='location'
             className='location-field'
             aria-label='Enter Your Location'
             placeholder='Enter a city and state to find BBQ!'
