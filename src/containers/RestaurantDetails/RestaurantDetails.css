@@ -10,10 +10,11 @@
   width: 40%;
   padding: 0.83em;
   text-align: left;
+  margin: 1em;
 }
 .details-section {
-  padding-left: 2em;
-  width: 60%;
+  width: 45%;
+  margin: 1em;
 }
 
 .visited-button {
@@ -24,4 +25,17 @@
   border: none;
   padding: 0.5rem;
   font-size: 1em;
+}
+
+.details-lower-section {
+  width: 40%;
+  margin: 1em auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.details-label {
+  font-weight: 800;
 }

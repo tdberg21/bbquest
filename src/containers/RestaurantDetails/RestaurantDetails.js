@@ -33,20 +33,24 @@ class RestaurantDetails extends Component {
       return (
         <div className='restaurant-details-container'>
           <section className='details-section'>
-            <h2>{this.props.name}</h2>
-            <img src={this.props.image} alt="restaurant" height="200px" />
-            <br/>
-            <a className='yelp-link' href={this.props.url} target='_blank'>Visit on Yelp!</a>
-            <p>Phone: {this.props.phone} </p>
-            <p>Address: {this.props.address.address1},<br/> {this.props.address.city}, {this.props.address.state}</p>
-            <p>Price Range: {this.props.price} </p>
-            <p>Rating: {this.props.rating} /5</p>
-            <button 
-              className='visited-button'
-              onClick={() => this.handleVisited(this.props.id)}
-            >
-              Mark As Visited
-            </button>
+            <div className='header-image-section'>
+              <h2>{this.props.name}</h2>
+              <img src={this.props.image} alt="restaurant" height="200px" />
+              <br/>
+            </div>
+            <div className='details-lower-section'>
+              <a className='yelp-link' href={this.props.url} target='_blank'>Visit on Yelp!</a>
+              <p>Phone: {this.props.phone} </p>
+              <p>Address: {this.props.address.address1},<br/> {this.props.address.city}, {this.props.address.state}</p>
+              <p>Price Range: {this.props.price} </p>
+              <p>Rating: {this.props.rating} /5</p>
+              <button 
+                className='visited-button'
+                onClick={() => this.handleVisited(this.props.id)}
+              >
+                Mark As Visited
+              </button>
+            </div>
           </section>
           <section className='reviews-section'>
             <h6>Reviews:</h6>

@@ -52,7 +52,7 @@ export class SearchForm extends Component {
             id='location'
             className='location-field'
             aria-label='Enter Your Location'
-            placeholder='Enter a city and state to find BBQ!'
+            placeholder='City and State or Zip Code'
             type='text'
             name='location'
             value={this.state.location}

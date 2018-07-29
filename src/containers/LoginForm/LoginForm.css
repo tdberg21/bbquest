@@ -8,10 +8,11 @@
 
 .login-form {
   background-color: rgb(243, 243, 243, .8);
-  margin: auto;
+  margin: 5em auto;
   width: 40%;
   height: 18rem;
-  padding: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #333;
 }
 
 label {
