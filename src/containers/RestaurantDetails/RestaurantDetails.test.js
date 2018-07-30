@@ -31,13 +31,16 @@ describe('RESTAURANT DETAILS TESTS', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  // it('when component is mounted, fetchDetails is called with correct param', async () => {
-  //   window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-  //     json: () => Promise.resolve({
-  //       results: { reviews: [{ text: 'taco' }, { text: 'taco' }, { text: 'taco' }] }
-  //     })
-  //   }));
-  //   const wrapper = shallow(<RestaurantDetails id='FJo2jznp56MU_IdDcX038A' />);
-  //   await expect(fetchDetails).toHaveBeenCalled();
-  // });
+  it('when component is mounted, it should update state with results of fetchDetails call', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({
+        reviews: [{ text: 'taco' }, { text: 'taco' }, { text: 'taco' }] 
+      })
+    }));
+    const mockAddress = {address1: '123 way', city: 'tacoland', state: 'taco'};
+    const wrapper = await shallow(<RestaurantDetails id='1' address={mockAddress} price='7' rating='5'/>);
+    await wrapper.update();
+
+    await expect(wrapper.state()).toEqual({results: { reviews: [{ text: '' }, { text: '' }, { text: '' }]}});
+  });
 });

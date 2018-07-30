@@ -41,7 +41,7 @@ describe('VISITED FORM TESTS', () => {
   });
 
   describe('mapStateToProps', () => {
-    it('should return an object with the todos array', () => {
+    it('should return an object with the user array', () => {
       const mockState = {
         user: [{ username: 'Arnold', id: 0 }]
       };

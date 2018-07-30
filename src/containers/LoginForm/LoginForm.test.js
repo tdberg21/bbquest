@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { LoginForm, mapDispatchToProps } from './LoginForm';
+import { LoginForm, mapStateToProps, mapDispatchToProps } from './LoginForm';
 import { loginUser, addVisited } from '../../actions';
 import { fetchUser } from '../../helpers/apiCalls';
 
@@ -73,6 +73,19 @@ describe('LOGINFORM TESTS', () => {
     expect(results).toEqual(expected);
   });
 
+  describe('mapStateToProps', () => {
+    it('should return an object with the username', () => {
+      const mockState = {user : {
+        username: 'Tory'
+      }};
+      const expected = {
+        username: 'Tory'
+      };
+      const mappedProps = mapStateToProps(mockState);
+
+      expect(mappedProps).toEqual(expected);
+    });
+  });
 
   describe('mapDispatchToProps', () => {
     it('calls dispatch with loginUser action', async () => {
