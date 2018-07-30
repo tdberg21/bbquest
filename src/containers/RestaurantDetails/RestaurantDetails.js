@@ -5,7 +5,7 @@ import './RestaurantDetails.css';
 import { connect } from 'react-redux';
 import pig from '../../pig.gif';
 
-class RestaurantDetails extends Component {
+export class RestaurantDetails extends Component {
   constructor () {
     super();
     
@@ -53,7 +53,7 @@ class RestaurantDetails extends Component {
             </div>
           </section>
           <section className='reviews-section'>
-            <h6>Reviews:</h6>
+            <h5>Reviews:</h5>
             <p className='reviews'> "{this.state.results.reviews[0].text}" </p>
             <p className='reviews'> "{this.state.results.reviews[1].text}" </p>
             <p className='reviews'> "{this.state.results.reviews[2].text}" </p>

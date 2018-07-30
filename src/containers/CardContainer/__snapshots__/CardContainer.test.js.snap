@@ -5,7 +5,13 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardContainer
-    restaurants={Array []}
+    restaurants={
+        Array [
+            Object {
+              "name": "PeeWees",
+            },
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -19,11 +25,27 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [],
+      "children": Array [
+        <Card
+          name="PeeWees"
+/>,
+      ],
       "className": "card-container",
     },
     "ref": null,
-    "rendered": Array [],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0 + PeeWees",
+        "nodeType": "function",
+        "props": Object {
+          "name": "PeeWees",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -32,11 +54,27 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [],
+        "children": Array [
+          <Card
+            name="PeeWees"
+/>,
+        ],
         "className": "card-container",
       },
       "ref": null,
-      "rendered": Array [],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0 + PeeWees",
+          "nodeType": "function",
+          "props": Object {
+            "name": "PeeWees",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],

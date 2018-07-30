@@ -18,15 +18,22 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <form
-        className="login-form"
+        className="search-form"
         onSubmit={[Function]}
 >
+        <label
+                className="search-label"
+                htmlFor="location"
+        >
+                Enter a city and state or zip code to find BBQ!
+        </label>
         <input
                 aria-label="Enter Your Location"
                 className="location-field"
+                id="location"
                 name="location"
                 onChange={[Function]}
-                placeholder="Enter a city and state to find BBQ!"
+                placeholder="City and State or Zip Code"
                 type="text"
                 value=""
         />
@@ -37,6 +44,7 @@ ShallowWrapper {
                 Submit
         </button>
 </form>,
+      "className": "search-form-container",
     },
     "ref": null,
     "rendered": Object {
@@ -45,12 +53,19 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <label
+            className="search-label"
+            htmlFor="location"
+>
+            Enter a city and state or zip code to find BBQ!
+</label>,
           <input
             aria-label="Enter Your Location"
             className="location-field"
+            id="location"
             name="location"
             onChange={[Function]}
-            placeholder="Enter a city and state to find BBQ!"
+            placeholder="City and State or Zip Code"
             type="text"
             value=""
 />,
@@ -61,7 +76,7 @@ ShallowWrapper {
             Submit
 </button>,
         ],
-        "className": "login-form",
+        "className": "search-form",
         "onSubmit": [Function],
       },
       "ref": null,
@@ -71,11 +86,25 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "Enter a city and state or zip code to find BBQ!",
+            "className": "search-label",
+            "htmlFor": "location",
+          },
+          "ref": null,
+          "rendered": "Enter a city and state or zip code to find BBQ!",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "aria-label": "Enter Your Location",
             "className": "location-field",
+            "id": "location",
             "name": "location",
             "onChange": [Function],
-            "placeholder": "Enter a city and state to find BBQ!",
+            "placeholder": "City and State or Zip Code",
             "type": "text",
             "value": "",
           },
@@ -108,15 +137,22 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <form
-          className="login-form"
+          className="search-form"
           onSubmit={[Function]}
 >
+          <label
+                    className="search-label"
+                    htmlFor="location"
+          >
+                    Enter a city and state or zip code to find BBQ!
+          </label>
           <input
                     aria-label="Enter Your Location"
                     className="location-field"
+                    id="location"
                     name="location"
                     onChange={[Function]}
-                    placeholder="Enter a city and state to find BBQ!"
+                    placeholder="City and State or Zip Code"
                     type="text"
                     value=""
           />
@@ -127,6 +163,7 @@ ShallowWrapper {
                     Submit
           </button>
 </form>,
+        "className": "search-form-container",
       },
       "ref": null,
       "rendered": Object {
@@ -135,12 +172,19 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <label
+              className="search-label"
+              htmlFor="location"
+>
+              Enter a city and state or zip code to find BBQ!
+</label>,
             <input
               aria-label="Enter Your Location"
               className="location-field"
+              id="location"
               name="location"
               onChange={[Function]}
-              placeholder="Enter a city and state to find BBQ!"
+              placeholder="City and State or Zip Code"
               type="text"
               value=""
 />,
@@ -151,7 +195,7 @@ ShallowWrapper {
               Submit
 </button>,
           ],
-          "className": "login-form",
+          "className": "search-form",
           "onSubmit": [Function],
         },
         "ref": null,
@@ -161,11 +205,25 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "children": "Enter a city and state or zip code to find BBQ!",
+              "className": "search-label",
+              "htmlFor": "location",
+            },
+            "ref": null,
+            "rendered": "Enter a city and state or zip code to find BBQ!",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
               "aria-label": "Enter Your Location",
               "className": "location-field",
+              "id": "location",
               "name": "location",
               "onChange": [Function],
-              "placeholder": "Enter a city and state to find BBQ!",
+              "placeholder": "City and State or Zip Code",
               "type": "text",
               "value": "",
             },

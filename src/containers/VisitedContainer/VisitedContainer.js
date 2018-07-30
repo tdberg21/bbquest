@@ -11,11 +11,23 @@ export class VisitedContainer extends Component {
           className='visited-card' 
           key={`${index}+ ${joint.restaurant_name}`}
         >
-          <h3>{joint.restaurant_name}</h3>
-          <p> rating: {joint.rating}</p>
-          <p> date visited: {joint.date}</p>
-          <p> meal: {joint.meal} </p>
-          <p> notes: {joint.notes} </p>
+          <h3 className='visited-header'>{joint.restaurant_name}</h3>
+          <div className='text-holder'>
+            <p> Rating: </p>
+            <p>{joint.rating}</p>
+          </div>
+          <div className='text-holder'>
+            <p> Date Visited:</p> 
+            <p>{joint.date}</p>
+          </div>
+          <div className='text-holder'>
+            <p> Meal: </p>
+            <p>{joint.meal} </p>
+          </div>
+          <div className='text-holder'>
+            <p> Notes: </p> 
+            <p>{joint.notes} </p>
+          </div>
         </div>
       );
     });
