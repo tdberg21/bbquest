@@ -21,6 +21,23 @@ describe('SIGN UP FORM TESTS', () => {
 
   });
 
+  it('should call loginUser when handleSubmit is invoked', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({
+        results: { id: 2 }
+      })
+    }));
+    const mockLoginUser = jest.fn();
+    const mockHistory = {push: jest.fn()};
+    const mockEvent = {preventDefault: jest.fn()};
+    const wrapper = await shallow(<SignUpForm loginUser={mockLoginUser} history={mockHistory}/>);
+
+    await wrapper.instance().handleSubmit(mockEvent);
+
+    expect(mockLoginUser).toHaveBeenCalled();
+  });
+
   // it('should call signUpUser when handleSubmit is invoked', () => {
   //   window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
   //     ok: true,

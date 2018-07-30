@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { VisitedForm } from './VisitedForm';
+import { VisitedForm, mapStateToProps } from './VisitedForm';
 
 describe('VISITED FORM TESTS', () => {
   it('should match the snapshot with a user', () => {
@@ -38,5 +38,19 @@ describe('VISITED FORM TESTS', () => {
     wrapper.instance().handleSubmit(mockEvent);
 
     expect(mockAddRestaurant).toHaveBeenCalled();
+  });
+
+  describe('mapStateToProps', () => {
+    it('should return an object with the todos array', () => {
+      const mockState = {
+        user: [{ username: 'Arnold', id: 0 }]
+      };
+      const expected = {
+        user: [{ username: 'Arnold', id: 0 }]
+      };
+      const mappedProps = mapStateToProps(mockState);
+
+      expect(mappedProps).toEqual(expected);
+    });
   });
 });
