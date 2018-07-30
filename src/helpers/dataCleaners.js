@@ -1,5 +1,5 @@
-export const scrubRestaurants = (response) => (
-  response.businesses.map((business) => {
+export const scrubRestaurants = (response) => {
+  return response.businesses.map((business) => {
     return {
       name: business.name.replace(/&/, 'and'),
       id: business.id,
@@ -10,4 +10,4 @@ export const scrubRestaurants = (response) => (
       address: {address1: business.location.address1, city: business.location.city, state: business.location.state},
       phone: business.display_phone
     };
-  }));
+  })};

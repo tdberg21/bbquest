@@ -59,6 +59,8 @@ ShallowWrapper {
                                         aria-label="Please Enter a rating out of 10"
                                         className="rating-field visited-fields"
                                         id="rating"
+                                        max="5"
+                                        min="0"
                                         name="rating"
                                         onChange={[Function]}
                                         placeholder="0 through 5"
@@ -150,6 +152,8 @@ ShallowWrapper {
                                         aria-label="Please Enter a rating out of 10"
                                         className="rating-field visited-fields"
                                         id="rating"
+                                        max="5"
+                                        min="0"
                                         name="rating"
                                         onChange={[Function]}
                                         placeholder="0 through 5"
@@ -238,6 +242,8 @@ ShallowWrapper {
                                           aria-label="Please Enter a rating out of 10"
                                           className="rating-field visited-fields"
                                           id="rating"
+                                          max="5"
+                                          min="0"
                                           name="rating"
                                           onChange={[Function]}
                                           placeholder="0 through 5"
@@ -339,6 +345,8 @@ ShallowWrapper {
                                     aria-label="Please Enter a rating out of 10"
                                     className="rating-field visited-fields"
                                     id="rating"
+                                    max="5"
+                                    min="0"
                                     name="rating"
                                     onChange={[Function]}
                                     placeholder="0 through 5"
@@ -385,6 +393,8 @@ ShallowWrapper {
                       aria-label="Please Enter a rating out of 10"
                       className="rating-field visited-fields"
                       id="rating"
+                      max="5"
+                      min="0"
                       name="rating"
                       onChange={[Function]}
                       placeholder="0 through 5"
@@ -416,6 +426,8 @@ ShallowWrapper {
                       "aria-label": "Please Enter a rating out of 10",
                       "className": "rating-field visited-fields",
                       "id": "rating",
+                      "max": "5",
+                      "min": "0",
                       "name": "rating",
                       "onChange": [Function],
                       "placeholder": "0 through 5",
@@ -583,6 +595,8 @@ ShallowWrapper {
                                                   aria-label="Please Enter a rating out of 10"
                                                   className="rating-field visited-fields"
                                                   id="rating"
+                                                  max="5"
+                                                  min="0"
                                                   name="rating"
                                                   onChange={[Function]}
                                                   placeholder="0 through 5"
@@ -674,6 +688,8 @@ ShallowWrapper {
                                                 aria-label="Please Enter a rating out of 10"
                                                 className="rating-field visited-fields"
                                                 id="rating"
+                                                max="5"
+                                                min="0"
                                                 name="rating"
                                                 onChange={[Function]}
                                                 placeholder="0 through 5"
@@ -762,6 +778,8 @@ ShallowWrapper {
                                                 aria-label="Please Enter a rating out of 10"
                                                 className="rating-field visited-fields"
                                                 id="rating"
+                                                max="5"
+                                                min="0"
                                                 name="rating"
                                                 onChange={[Function]}
                                                 placeholder="0 through 5"
@@ -863,6 +881,8 @@ ShallowWrapper {
                                         aria-label="Please Enter a rating out of 10"
                                         className="rating-field visited-fields"
                                         id="rating"
+                                        max="5"
+                                        min="0"
                                         name="rating"
                                         onChange={[Function]}
                                         placeholder="0 through 5"
@@ -909,6 +929,8 @@ ShallowWrapper {
                         aria-label="Please Enter a rating out of 10"
                         className="rating-field visited-fields"
                         id="rating"
+                        max="5"
+                        min="0"
                         name="rating"
                         onChange={[Function]}
                         placeholder="0 through 5"
@@ -940,6 +962,8 @@ ShallowWrapper {
                         "aria-label": "Please Enter a rating out of 10",
                         "className": "rating-field visited-fields",
                         "id": "rating",
+                        "max": "5",
+                        "min": "0",
                         "name": "rating",
                         "onChange": [Function],
                         "placeholder": "0 through 5",
@@ -1099,45 +1123,27 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <h3>
-           Please Sign In! 
-</h3>,
-        <Link
-          replace={false}
-          to="/login/"
+      "children": <Link
+        replace={false}
+        to="/login/"
 >
-          Login Page
+        Please Sign In!
 </Link>,
-      ],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": " Please Sign In! ",
-        },
-        "ref": null,
-        "rendered": " Please Sign In! ",
-        "type": "h3",
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": "Please Sign In!",
+        "replace": false,
+        "to": "/login/",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": "Login Page",
-          "replace": false,
-          "to": "/login/",
-        },
-        "ref": null,
-        "rendered": "Login Page",
-        "type": [Function],
-      },
-    ],
+      "ref": null,
+      "rendered": "Please Sign In!",
+      "type": [Function],
+    },
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -1146,45 +1152,27 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <h3>
-             Please Sign In! 
-</h3>,
-          <Link
-            replace={false}
-            to="/login/"
+        "children": <Link
+          replace={false}
+          to="/login/"
 >
-            Login Page
+          Please Sign In!
 </Link>,
-        ],
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": " Please Sign In! ",
-          },
-          "ref": null,
-          "rendered": " Please Sign In! ",
-          "type": "h3",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Please Sign In!",
+          "replace": false,
+          "to": "/login/",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "Login Page",
-            "replace": false,
-            "to": "/login/",
-          },
-          "ref": null,
-          "rendered": "Login Page",
-          "type": [Function],
-        },
-      ],
+        "ref": null,
+        "rendered": "Please Sign In!",
+        "type": [Function],
+      },
       "type": "div",
     },
   ],
