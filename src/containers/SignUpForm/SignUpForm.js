@@ -27,9 +27,7 @@ export class SignUpForm extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     const { username, email, password } = this.state;
-
     const results = await signUpUser(username, email, password);
-    console.log(results);
     this.props.loginUser(username, results.id);
     this.props.history.push('/search');
   }

@@ -11,6 +11,15 @@ describe('APP TESTS', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should find a restaurant', () => {
+    const mockRestaurants = [{id: 1, name: 'PeeWees'}, {id: 2, name: 'Moes'}];
+    const wrapper = shallow(<App restaurants={mockRestaurants}/>);
+    const expected = {id: 1, name: 'PeeWees'};
+    const results = wrapper.instance().findRestaurant(1);
+    
+    expect(results).toEqual(expected);
+  });
+
   it('should call logOutUser when logOut is invoked', () => {
     const mockLogOut = jest.fn();
     const wrapper = shallow(<App logOut={mockLogOut} addVisited={jest.fn()}/>);

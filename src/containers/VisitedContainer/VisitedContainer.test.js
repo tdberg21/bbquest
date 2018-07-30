@@ -8,4 +8,11 @@ describe('VISITED CONTAINER TESTS', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should return an array of divs to display', () => {
+    const mockVisited = [{restaurant_name: 'PeeWees'}];
+    const wrapper = shallow(<VisitedContainer visited={mockVisited} />);
+    const results = wrapper.instance().displayVisited();
+    expect(results.length).toEqual(1);
+  });
 });
