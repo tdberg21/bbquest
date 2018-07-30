@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VISITED FORM TESTS should match the snapshot 1`] = `
+exports[`VISITED FORM TESTS should match the snapshot with a user 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -1063,6 +1063,128 @@ ShallowWrapper {
         },
         "type": "form",
       },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`VISITED FORM TESTS should match the snapshot without a user 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <VisitedForm
+    user={
+        Object {
+            "username": "",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+           Please Sign In! 
+</h3>,
+        <Link
+          replace={false}
+          to="/login/"
+>
+          Login Page
+</Link>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " Please Sign In! ",
+        },
+        "ref": null,
+        "rendered": " Please Sign In! ",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Login Page",
+          "replace": false,
+          "to": "/login/",
+        },
+        "ref": null,
+        "rendered": "Login Page",
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+             Please Sign In! 
+</h3>,
+          <Link
+            replace={false}
+            to="/login/"
+>
+            Login Page
+</Link>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Please Sign In! ",
+          },
+          "ref": null,
+          "rendered": " Please Sign In! ",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Login Page",
+            "replace": false,
+            "to": "/login/",
+          },
+          "ref": null,
+          "rendered": "Login Page",
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
