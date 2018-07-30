@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { LoginForm } from './LoginForm';
+import { LoginForm, mapDispatchToProps } from './LoginForm';
+import { loginUser, addVisited } from '../../actions';
 
 describe('LOGINFORM TESTS', () => {
   let wrapper;
@@ -33,5 +34,28 @@ describe('LOGINFORM TESTS', () => {
     const results = wrapper.state();
   
     expect(results).toEqual(expected);
+  });
+
+
+  describe('mapDispatchToProps', () => {
+    it('calls dispatch with loginUser action', async () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = loginUser('Tory', 9);
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.loginUser('Tory', 9);
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
+
+    it('calls dispatch with addVisited action', async () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = addVisited('PeeWees');
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.addVisited('PeeWees');
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
   });
 });

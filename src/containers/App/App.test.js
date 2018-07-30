@@ -1,12 +1,61 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { App, mapDispatchToProps } from './App';
 import { shallow } from 'enzyme';
+import { addRestaurants, logOutUser, addVisited } from '../../actions';
 
 describe('APP TESTS', () => {
   it('should match the snapshot', () => {
     const wrapper = shallow(<App />);
 
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should call logOutUser when logOut is invoked', () => {
+    const mockLogOut = jest.fn();
+    const wrapper = shallow(<App logOut={mockLogOut} addVisited={jest.fn()}/>);
+
+    wrapper.instance().logOut();
+    expect(mockLogOut).toHaveBeenCalled();
+  });
+
+  it('should call addVisited when logOut is invoked', () => {
+    const mockAddVisited = jest.fn();
+    const wrapper = shallow(<App logOut={jest.fn()} addVisited={mockAddVisited} />);
+
+    wrapper.instance().logOut();
+    expect(mockAddVisited).toHaveBeenCalled();
+  });
+
+  describe('mapDispatchToProps', () => {
+    it('calls dispatch with addRestaurants action', async () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = addRestaurants(['PeeWees']);
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.addRestaurants(['PeeWees']);
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
+
+    it('calls dispatch with logOutUser action', async () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = logOutUser();
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.logOut();
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
+
+    it('calls dispatch with addVisited action', async () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = addVisited('PeeWees');
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.addVisited('PeeWees');
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
   });
 });

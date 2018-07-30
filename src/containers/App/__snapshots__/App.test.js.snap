@@ -4,7 +4,7 @@ exports[`APP TESTS should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(App)) />,
+  Symbol(enzyme.__unrendered__): <App />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,25 +15,331 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <Header
+          logOutUser={[Function]}
+          user={undefined}
+          visited={undefined}
+/>,
+        <Route
+          component={[Function]}
+          path="/login"
+/>,
+        <Route
+          component={[Function]}
+          path="/search"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/restaurants"
+/>,
+        <Route
+          component={[Function]}
+          path="/signup"
+/>,
+        <Route
+          path="/restaurants/:name"
+          render={[Function]}
+/>,
+        <Route
+          path="/restaurants/:name/review"
+          render={[Function]}
+/>,
+        <Route
+          component={[Function]}
+          path="/visited"
+/>,
+      ],
+      "className": "App",
     },
     "ref": null,
-    "rendered": [Function],
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "logOutUser": [Function],
+          "user": undefined,
+          "visited": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/login",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/search",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/restaurants",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/signup",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "path": "/restaurants/:name",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "path": "/restaurants/:name/review",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/visited",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <Header
+            logOutUser={[Function]}
+            user={undefined}
+            visited={undefined}
+/>,
+          <Route
+            component={[Function]}
+            path="/login"
+/>,
+          <Route
+            component={[Function]}
+            path="/search"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/restaurants"
+/>,
+          <Route
+            component={[Function]}
+            path="/signup"
+/>,
+          <Route
+            path="/restaurants/:name"
+            render={[Function]}
+/>,
+          <Route
+            path="/restaurants/:name/review"
+            render={[Function]}
+/>,
+          <Route
+            component={[Function]}
+            path="/visited"
+/>,
+        ],
+        "className": "App",
       },
       "ref": null,
-      "rendered": [Function],
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "logOutUser": [Function],
+            "user": undefined,
+            "visited": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/login",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/search",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/restaurants",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/signup",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "path": "/restaurants/:name",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "path": "/restaurants/:name/review",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/visited",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
