@@ -57,7 +57,7 @@ describe('LOGINFORM TESTS', () => {
     const mockEvent = { preventDefault: jest.fn() };
     await wrapper.instance().handleSubmit(mockEvent);
 
-    expect(fetchUser).toHaveBeenCalled();
+    expect(fetchVisitedRestaurants).toHaveBeenCalled();
   });
 
   it('should reset the state when resetState is invoked', () => {

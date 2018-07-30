@@ -54,6 +54,8 @@ export class VisitedForm extends Component {
                     className='rating-field visited-fields'
                     aria-label='Please Enter a rating out of 10'
                     placeholder='0 through 5'
+                    min='0'
+                    max='5'
                     type='number'
                     name='rating'
                     value={this.state.rating}
@@ -98,8 +100,7 @@ export class VisitedForm extends Component {
     } else {
       return (
         <div> 
-          <h3> Please Sign In! </h3>
-          <Link to={'/login/'}>Login Page</Link>
+          <Link to={'/login/'}>Please Sign In!</Link>
         </div>
       );
     }

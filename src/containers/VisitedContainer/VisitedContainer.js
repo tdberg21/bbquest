@@ -4,12 +4,17 @@ import './VisitedContainer.css';
 
 export class VisitedContainer extends Component {
 
+  // redirectToDetails = (name) => {
+  //   this.props.history.push(`/restaurants/${name}`);
+  // }
+
   displayVisited = () => {
     return this.props.visited.map((joint, index) => {
       return (
         <div 
           className='visited-card' 
           key={`${index}+ ${joint.restaurant_name}`}
+          // onClick={() => this.redirectToDetails(joint.restaurant_name)}
         >
           <h3 className='visited-header'>{joint.restaurant_name}</h3>
           <div className='text-holder'>
