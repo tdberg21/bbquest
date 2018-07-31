@@ -1,5 +1,5 @@
 import React from 'react';
-import { RestaurantDetails } from './RestaurantDetails';
+import { RestaurantDetails, mapStateToProps } from './RestaurantDetails';
 import { shallow } from 'enzyme';
 import { fetchDetails } from '../../helpers/apiCalls';
 
@@ -42,5 +42,19 @@ describe('RESTAURANT DETAILS TESTS', () => {
     await wrapper.update();
 
     await expect(wrapper.state()).toEqual({results: { reviews: [{ text: '' }, { text: '' }, { text: '' }]}});
+  });
+
+  describe('mapStateToProps', () => {
+    it('should return an object with the visited joints array', () => {
+      const mockState = {
+        visited: [{ name: 'PeeWees'}]
+      };
+      const expected = {
+        visited: [{ name: 'PeeWees' }]
+      };
+      const mappedProps = mapStateToProps(mockState);
+
+      expect(mappedProps).toEqual(expected);
+    });
   });
 });
