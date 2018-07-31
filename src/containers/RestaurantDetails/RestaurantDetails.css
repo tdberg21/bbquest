@@ -3,7 +3,7 @@
   justify-content: space-evenly;
   width: 101%;
   background-image: url(https://www.pigrigbbq.com/files/2017-02/background.jpg);
-  height: 1300px;
+  height: 1500px;
   background-size: cover;
 }
 
@@ -14,7 +14,7 @@
 .reviews-section {
   background-color: rgb(243, 243, 243, .8);
   width: 40%;
-  height: 45vh;
+  height: 55vh;
   padding: 0.83em;
   text-align: left;
   margin: 3em;
@@ -24,7 +24,7 @@
 .details-section {
   background-color: rgb(243, 243, 243, .8);
   width: 45%;
-  height: 80vh;
+  height: 78vh;
   margin: 3em;
   border-radius: 0.75em;
 }
@@ -40,7 +40,7 @@
 }
 
 .details-lower-section {
-  width: 30%;
+  width: 60%;
   margin: 1em auto;
   display: flex;
   align-items: flex-start;

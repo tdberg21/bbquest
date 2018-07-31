@@ -20,5 +20,5 @@ export default Card;
 
 Card.propTypes = {
   image: PropTypes.string,
-  name: PropTypes.name
+  name: PropTypes.string
 };

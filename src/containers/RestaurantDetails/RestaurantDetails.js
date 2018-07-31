@@ -45,15 +45,25 @@ export class RestaurantDetails extends Component {
                 href={this.props.url} target='_blank'>
                 Visit on Yelp!
               </a>
-              <p>Phone: {this.props.phone} </p>
-              <p>Address: 
+              <p>
+                <b>Phone: </b>
+                {this.props.phone} 
+              </p>
+              <p>
+                <b>Address: </b> 
                 {this.props.address.address1},
                 <br/> 
                 {this.props.address.city}, 
                 {this.props.address.state}
               </p>
-              <p>Price Range: {this.props.price} </p>
-              <p>Rating: {this.props.rating} /5</p>
+              <p>
+                <b>Price Range: </b>
+                {this.props.price} 
+              </p>
+              <p>
+                <b>Rating: </b> 
+                {this.props.rating} /5
+              </p>
               <button 
                 className='visited-button'
                 onClick={() => this.handleVisited(this.props.id)}
@@ -63,7 +73,7 @@ export class RestaurantDetails extends Component {
             </div>
           </section>
           <section className='reviews-section'>
-            <h5>Reviews:</h5>
+            <h5>Reviews: </h5>
             <p className='reviews'> 
               {this.state.results.reviews[0] ? `${this.state.results.reviews[0].text}` : ''}
             </p>
@@ -98,7 +108,7 @@ export default withRouter(connect(mapStateToProps, null)(RestaurantDetails));
 
 RestaurantDetails.propTypes = {
   address: PropTypes.object,
-  id: PropTypes.number,
+  id: PropTypes.string,
   checkVisited: PropTypes.func,
   phone: PropTypes.string,
   url: PropTypes.string,

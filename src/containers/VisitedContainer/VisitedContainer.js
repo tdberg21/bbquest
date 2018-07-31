@@ -16,19 +16,19 @@ export class VisitedContainer extends Component {
           <h3 className='visited-header'>{joint.restaurant_name}</h3>
           <img className='joint-image' src={joint.imageUrl}/>
           <div className='text-holder'>
-            <p> Rating: </p>
+            <p> <b> Rating: </b> </p>
             <p>{joint.rating}</p>
           </div>
           <div className='text-holder'>
-            <p> Date Visited:</p> 
+            <p><b> Date Visited:</b></p> 
             <p>{joint.date}</p>
           </div>
           <div className='text-holder'>
-            <p> Meal: </p>
+            <p><b> Meal: </b></p>
             <p>{joint.meal} </p>
           </div>
           <div className='text-holder'>
-            <p> Notes: </p> 
+            <p> <b>Notes: </b></p> 
             <p>{joint.notes} </p>
           </div>
         </div>
