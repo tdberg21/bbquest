@@ -46,28 +46,36 @@ export class VisitedForm extends Component {
                 value={this.state.meal}
                 onChange={this.handleChange}
               />
-              <label htmlFor='rating'>Rating:</label>
-              <input
-                id='rating'
-                className='rating-field visited-fields'
-                aria-label='Please Enter a rating out of 10'
-                placeholder='0 through 5'
-                type='number'
-                name='rating'
-                value={this.state.rating}
-                onChange={this.handleChange}
-              />
-              <label htmlFor='date'>Date:</label>
-              <input
-                id='date'
-                className='date-field visited-fields'
-                aria-label='Please Enter Your Password'
-                placeholder='date of visit'
-                type='date'
-                name='date'
-                value={this.state.date}
-                onChange={this.handleChange}
-              />
+              <div className='rating-date-container'>
+                <div className='rating-container'>
+                  <label htmlFor='rating'>Rating:</label>
+                  <input
+                    id='rating'
+                    className='rating-field visited-fields'
+                    aria-label='Please Enter a rating out of 10'
+                    placeholder='0 through 5'
+                    min='0'
+                    max='5'
+                    type='number'
+                    name='rating'
+                    value={this.state.rating}
+                    onChange={this.handleChange}
+                  />
+                </div>  
+                <div className='date-container'>
+                  <label htmlFor='date'>Date:</label>
+                  <input
+                    id='date'
+                    className='date-field visited-fields'
+                    aria-label='Please Enter Your Password'
+                    placeholder='date of visit'
+                    type='date'
+                    name='date'
+                    value={this.state.date}
+                    onChange={this.handleChange}
+                  />
+                </div>
+              </div>  
               <label htmlFor='notes'>Notes:</label>
               <input
                 id='notes'
@@ -92,8 +100,7 @@ export class VisitedForm extends Component {
     } else {
       return (
         <div> 
-          <h3> Please Sign In! </h3>
-          <Link to={'/login/'}>Login Page</Link>
+          <Link to={'/login/'}>Please Sign In!</Link>
         </div>
       );
     }

@@ -38,7 +38,6 @@ export class App extends Component {
   addRestaurantToDatabase = async (rating, notes, date, meal) => {
     const jointToSave = await this.findRestaurant(this.state.yelpId);
     const results = await addVisitedRestaurant(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId);
-    console.log(results);
     const visited = await fetchVisitedRestaurants(this.props.user.id);
     this.props.addVisited(visited);
   }

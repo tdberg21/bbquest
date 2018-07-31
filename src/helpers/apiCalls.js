@@ -71,16 +71,16 @@ export const fetchVisitedRestaurants = async (user_id) => {
   return await results;
 };
 
-export const addVisitedRestaurant = async (rating='', notes='', date='no date entered', user_id, restaurant_name, meal='', yelpId) => {
-  if(!rating || rating === '') {
-    rating = 'n/a'
-  }
-  if(!notes) {
-    notes='n/a'
-  }
-  if(!date) {
-    date='n/a'
-  }
+export const addVisitedRestaurant = async (rating, notes, date, user_id, restaurant_name, meal, yelpId) => {
+  // if (!rating || rating === '') {
+  //   rating = 'n/a';
+  // }
+  // if (!notes) {
+  //   notes='n/a';
+  // }
+  // if (!date) {
+  //   date='n/a';
+  // }
 
   const url = `http://localhost:3000/api/v1/restaurants?rating=${rating}&notes=${notes}&date=${date}&user_id=${user_id}&restaurant_name=${restaurant_name}&meal=${meal}&yelpId=${yelpId}`;
   const response = await fetch(url, {

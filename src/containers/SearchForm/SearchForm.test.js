@@ -11,17 +11,6 @@ describe('SEARCHFORM TESTS', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call handle change when the searchform field changes', () => {
-    const mockEvent = { target: { value: 'abc', name: 'location'} };
-    const wrapper = mount(<SearchForm />);
-    const spy = spyOn(wrapper.instance(), 'handleChange');
-    wrapper.instance().update;
-
-    wrapper.find('.location-field').simulate('change', mockEvent);
-    wrapper.instance().forceUpdate();
-    expect(spy).toHaveBeenCalled();
-  });
-
   it('should update the state when handleChange is invoked', () => {
     const wrapper = shallow(<SearchForm />);
     const mockEvent = { target: { value: 'abc', name: 'location' } };
@@ -29,6 +18,21 @@ describe('SEARCHFORM TESTS', () => {
     wrapper.instance().handleChange(mockEvent);
 
     expect(wrapper.state('location')).toEqual('abc');
+  });
+
+  it('should push you to restaurants page when handleSubmit is called', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({
+        businesses:  [{name: 'BBQ Restaurant', location: {address1: 'afsasf', city: 'tacoland', state: 'taco'}}]
+      })
+    }));
+    const mockPush = jest.fn();
+    const mockHistory = {push: mockPush};
+    const wrapper = await shallow(<SearchForm history={mockHistory} addRestaurants={jest.fn()}/>);
+    const mockEvent = {preventDefault: jest.fn()};
+    await wrapper.instance().handleSubmit(mockEvent);
+
+    expect(mockPush).toHaveBeenCalled();
   });
 
   describe('MATCH STATE TO PROPS', () => {

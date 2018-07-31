@@ -17,60 +17,41 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <h3 />,
+      "children": <Link
+        className="details-link"
+        replace={false}
+        to="/restaurants/undefined"
+>
+        <h3
+                className="card-header"
+        />
         <img
-          alt="restaurant picture"
-          height="200px"
-          src={undefined}
-/>,
-      ],
+                alt="restaurant"
+                className="restaurant-images"
+                src={undefined}
+        />
+</Link>,
       "className": "card",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "alt": "restaurant picture",
-          "height": "200px",
-          "src": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
-          <h3 />,
+          <h3
+            className="card-header"
+/>,
           <img
-            alt="restaurant picture"
-            height="200px"
+            alt="restaurant"
+            className="restaurant-images"
             src={undefined}
 />,
         ],
-        "className": "card",
+        "className": "details-link",
+        "replace": false,
+        "to": "/restaurants/undefined",
       },
       "ref": null,
       "rendered": Array [
@@ -80,6 +61,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": undefined,
+            "className": "card-header",
           },
           "ref": null,
           "rendered": null,
@@ -90,8 +72,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "restaurant picture",
-            "height": "200px",
+            "alt": "restaurant",
+            "className": "restaurant-images",
             "src": undefined,
           },
           "ref": null,
@@ -99,6 +81,82 @@ ShallowWrapper {
           "type": "img",
         },
       ],
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Link
+          className="details-link"
+          replace={false}
+          to="/restaurants/undefined"
+>
+          <h3
+                    className="card-header"
+          />
+          <img
+                    alt="restaurant"
+                    className="restaurant-images"
+                    src={undefined}
+          />
+</Link>,
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <h3
+              className="card-header"
+/>,
+            <img
+              alt="restaurant"
+              className="restaurant-images"
+              src={undefined}
+/>,
+          ],
+          "className": "details-link",
+          "replace": false,
+          "to": "/restaurants/undefined",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "card-header",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "restaurant",
+              "className": "restaurant-images",
+              "src": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": [Function],
+      },
       "type": "div",
     },
   ],
