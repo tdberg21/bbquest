@@ -5,6 +5,7 @@ import { loginUser, addVisited } from '../../actions';
 import { fetchUser, fetchVisitedRestaurants } from '../../helpers/apiCalls';
 import './LoginForm.css';
 import SearchForm from '../SearchForm/SearchForm';
+import PropTypes from 'prop-types';
 
 export class LoginForm extends Component {
   constructor() {
@@ -51,7 +52,7 @@ export class LoginForm extends Component {
             onSubmit={this.handleSubmit}
           >
             <div className='inputs'>
-            <label for="username">Username:</label>
+              <label htmlFor="username">Username:</label>
               <input
                 id='username'
                 className='username-field input-fields'
@@ -61,7 +62,7 @@ export class LoginForm extends Component {
                 value={this.state.username}
                 onChange={this.handleChange}
               />
-              <label for="email">Email:</label>
+              <label htmlFor="email">Email:</label>
               <input
                 id='email'
                 className='email-field input-fields'
@@ -71,7 +72,7 @@ export class LoginForm extends Component {
                 value={this.state.email}
                 onChange={this.handleChange}
               />
-              <label for="password">Password:</label>
+              <label htmlFor="password">Password:</label>
               <input
                 className='password-field input-fields'
                 aria-label='Please Enter Your Password'
@@ -115,3 +116,10 @@ export const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+
+LoginForm.propTypes = {
+  username: PropTypes.string,
+  addVisited: PropTypes.func,
+  loginUser: PropTypes.func,
+  history: PropTypes.object
+};
