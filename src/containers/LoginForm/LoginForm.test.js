@@ -1,8 +1,10 @@
+/*eslint-disable no-undef*/
+
 import React from 'react';
 import { shallow } from 'enzyme';
 import { LoginForm, mapStateToProps, mapDispatchToProps } from './LoginForm';
 import { loginUser, addVisited } from '../../actions';
-import { fetchUser } from '../../helpers/apiCalls';
+import { fetchUser, fetchVisitedRestaurants } from '../../helpers/apiCalls';
 
 describe('LOGINFORM TESTS', () => {
   let wrapper;

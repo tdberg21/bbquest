@@ -1,3 +1,5 @@
+/*eslint-disable camelcase, max-len*/
+
 import { apiKey } from './apiKey';
 
 export const fetchRestaurantData = async (key, location) => {

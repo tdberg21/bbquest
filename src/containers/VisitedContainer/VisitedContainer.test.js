@@ -1,3 +1,5 @@
+/*eslint-disable camelcase*/
+
 import React from 'react';
 import { shallow } from 'enzyme';
 import { VisitedContainer, mapStateToProps } from './VisitedContainer';

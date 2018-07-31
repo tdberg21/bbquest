@@ -42,7 +42,14 @@ describe('DATA CLEANER TESTS', () => {
         "distance": 1919.4201776036425
       }]};
     const results = scrubRestaurants(mockResponse);
-    const expected = [{ "id": "ZtsJuo3nfgv5Na4SZLKuZQ", "image": "https://s3.jpg", "name": "Kitchen Table: BBQ and Comfort Food", "price": "$$", "rating": 4.5, "address": { "address1": "3242 E Colfax Ave", "city": "Denver", "state": "CO" }, "phone": "(303) 399-9703", "url": "https://www.yelp.com/biz/kitchen-table-bbq"}];
+    const expected = [
+      { "id": "ZtsJuo3nfgv5Na4SZLKuZQ", 
+        "image": "https://s3.jpg", 
+        "name": "Kitchen Table: BBQ and Comfort Food", 
+        "price": "$$", 
+        "rating": 4.5, 
+        "address": { "address1": "3242 E Colfax Ave", "city": "Denver", "state": "CO" }, "phone": "(303) 399-9703", 
+        "url": "https://www.yelp.com/biz/kitchen-table-bbq"}];
 
     expect(results).toEqual(expected);
   });

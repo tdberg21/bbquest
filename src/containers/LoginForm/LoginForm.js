@@ -89,7 +89,7 @@ export class LoginForm extends Component {
               </button>
             </div>
             <Link to='/signup'>
-              Don't have an account?
+              Don&apos;t have an account?
             </Link>
           </form>
         </div>
