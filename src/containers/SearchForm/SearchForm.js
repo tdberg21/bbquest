@@ -8,7 +8,6 @@ import './SearchForm.css';
 import PropTypes from 'prop-types';
 
 
-
 export class SearchForm extends Component {
   constructor() {
     super();
@@ -82,5 +81,6 @@ export const mapDispatchToProps = (dispatch) => ({
 export default connect(mapStateToProps, mapDispatchToProps)(SearchForm);
 
 SearchForm.propTypes = {
-  addRestaurants: PropTypes.func
+  addRestaurants: PropTypes.func,
+  history: PropTypes.object
 };
