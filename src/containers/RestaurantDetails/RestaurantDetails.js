@@ -64,9 +64,15 @@ export class RestaurantDetails extends Component {
           </section>
           <section className='reviews-section'>
             <h5>Reviews:</h5>
-            <p className='reviews'> {this.state.results.reviews[0] ? `${this.state.results.reviews[0].text}` : ''}</p>
-            <p className='reviews'> {this.state.results.reviews[1] ? `${this.state.results.reviews[1].text}` : ''} </p>
-            <p className='reviews'> {this.state.results.reviews[2] ? `${this.state.results.reviews[2].text}` : ''} </p>
+            <p className='reviews'> 
+              {this.state.results.reviews[0] ? `${this.state.results.reviews[0].text}` : ''}
+            </p>
+            <p className='reviews'> 
+              {this.state.results.reviews[1] ? `${this.state.results.reviews[1].text}` : ''} 
+            </p>
+            <p className='reviews'> 
+              {this.state.results.reviews[2] ? `${this.state.results.reviews[2].text}` : ''} 
+            </p>
             <Link to={'/restaurants/'}>Back</Link>
           </section>
         </div>

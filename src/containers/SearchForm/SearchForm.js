@@ -5,6 +5,7 @@ import { apiKey } from '../../helpers/apiKey';
 import { scrubRestaurants } from '../../helpers/dataCleaners';
 import { addRestaurants } from '../../actions';
 import './SearchForm.css';
+import PropTypes from 'prop-types';
 
 
 
@@ -79,3 +80,7 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchForm);
+
+SearchForm.propTypes = {
+  addRestaurants: PropTypes.func
+};
