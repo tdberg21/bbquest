@@ -12,6 +12,7 @@ import RestaurantDetails from '../RestaurantDetails/RestaurantDetails';
 import { addVisitedRestaurant, fetchVisitedRestaurants } from '../../helpers/apiCalls.js';
 import VisitedForm from '../VisitedForm/VisitedForm';
 import VisitedContainer from '../VisitedContainer/VisitedContainer';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
   constructor () {
@@ -23,11 +24,9 @@ export class App extends Component {
   }
 
   checkVisited = (yelpId) => {
-    console.log(yelpId)
     const duplicate = this.props.visited.find(visited => {
       return visited.yelpId === yelpId;
     });
-    console.log(duplicate);
     if (duplicate) {
       this.props.history.push('/restaurants/');
     } else {
@@ -39,8 +38,7 @@ export class App extends Component {
 
   addRestaurantToDatabase = async (rating, notes, date, meal) => {
     const jointToSave = await this.findRestaurant(this.state.yelpId);
-    console.log(jointToSave);
-    const results = await addVisitedRestaurant(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId, jointToSave.image, jointToSave.url);
+    await addVisitedRestaurant(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId, jointToSave.image, jointToSave.url);
     const visited = await fetchVisitedRestaurants(this.props.user.id);
     this.props.addVisited(visited);
   }
@@ -67,10 +65,15 @@ export class App extends Component {
         <Route exact path='/restaurants' component={CardContainer} />
         <Route path='/signup' component={SignUpForm} />
         <Route path='/restaurants/:name' render={({ match }) => {
-          let restaurant = this.props.restaurants.find(restaurant => restaurant.name === match.params.name);
-          return <RestaurantDetails checkVisited={this.checkVisited} {...restaurant} />;
+          let restaurant = this.props.restaurants.find(restaurant => {
+            return restaurant.name === match.params.name 
+          });
+          return <RestaurantDetails 
+            checkVisited={this.checkVisited} {...restaurant} />;
         }} />
-        <Route path='/restaurants/:name/review' render={() => <VisitedForm addRestaurantToDatabase={this.addRestaurantToDatabase}/>}/>
+        <Route path='/restaurants/:name/review' 
+          render={() => <VisitedForm 
+            addRestaurantToDatabase={this.addRestaurantToDatabase}/>}/>
         <Route path='/visited' component={VisitedContainer} />
       </div>
     );
@@ -90,3 +93,12 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+
+App.propTypes = {
+  user: PropTypes.object,
+  visited: PropTypes.array,
+  restaurants: PropTypes.array,
+  addVisited: PropTypes.func,
+  logOut: PropTypes.func,
+  history: PropTypes.object
+};
