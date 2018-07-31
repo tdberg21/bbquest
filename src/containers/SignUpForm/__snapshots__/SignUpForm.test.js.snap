@@ -25,7 +25,7 @@ ShallowWrapper {
                 className="inputs"
         >
                 <label
-                        for="username"
+                        htmlFor="username"
                 >
                         Username:
                 </label>
@@ -39,7 +39,7 @@ ShallowWrapper {
                         value=""
                 />
                 <label
-                        for="email"
+                        htmlFor="email"
                 >
                         Email:
                 </label>
@@ -53,7 +53,7 @@ ShallowWrapper {
                         value=""
                 />
                 <label
-                        for="password"
+                        htmlFor="password"
                 >
                         Password:
                 </label>
@@ -93,7 +93,7 @@ ShallowWrapper {
             className="inputs"
 >
             <label
-                        for="username"
+                        htmlFor="username"
             >
                         Username:
             </label>
@@ -107,7 +107,7 @@ ShallowWrapper {
                         value=""
             />
             <label
-                        for="email"
+                        htmlFor="email"
             >
                         Email:
             </label>
@@ -121,7 +121,7 @@ ShallowWrapper {
                         value=""
             />
             <label
-                        for="password"
+                        htmlFor="password"
             >
                         Password:
             </label>
@@ -160,7 +160,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <label
-                for="username"
+                htmlFor="username"
 >
                 Username:
 </label>,
@@ -174,7 +174,7 @@ ShallowWrapper {
                 value=""
 />,
               <label
-                for="email"
+                htmlFor="email"
 >
                 Email:
 </label>,
@@ -188,7 +188,7 @@ ShallowWrapper {
                 value=""
 />,
               <label
-                for="password"
+                htmlFor="password"
 >
                 Password:
 </label>,
@@ -218,7 +218,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Username:",
-                "for": "username",
+                "htmlFor": "username",
               },
               "ref": null,
               "rendered": "Username:",
@@ -247,7 +247,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Email:",
-                "for": "email",
+                "htmlFor": "email",
               },
               "ref": null,
               "rendered": "Email:",
@@ -276,7 +276,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Password:",
-                "for": "password",
+                "htmlFor": "password",
               },
               "ref": null,
               "rendered": "Password:",
@@ -347,7 +347,7 @@ ShallowWrapper {
                     className="inputs"
           >
                     <label
-                              for="username"
+                              htmlFor="username"
                     >
                               Username:
                     </label>
@@ -361,7 +361,7 @@ ShallowWrapper {
                               value=""
                     />
                     <label
-                              for="email"
+                              htmlFor="email"
                     >
                               Email:
                     </label>
@@ -375,7 +375,7 @@ ShallowWrapper {
                               value=""
                     />
                     <label
-                              for="password"
+                              htmlFor="password"
                     >
                               Password:
                     </label>
@@ -415,7 +415,7 @@ ShallowWrapper {
               className="inputs"
 >
               <label
-                            for="username"
+                            htmlFor="username"
               >
                             Username:
               </label>
@@ -429,7 +429,7 @@ ShallowWrapper {
                             value=""
               />
               <label
-                            for="email"
+                            htmlFor="email"
               >
                             Email:
               </label>
@@ -443,7 +443,7 @@ ShallowWrapper {
                             value=""
               />
               <label
-                            for="password"
+                            htmlFor="password"
               >
                             Password:
               </label>
@@ -482,7 +482,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <label
-                  for="username"
+                  htmlFor="username"
 >
                   Username:
 </label>,
@@ -496,7 +496,7 @@ ShallowWrapper {
                   value=""
 />,
                 <label
-                  for="email"
+                  htmlFor="email"
 >
                   Email:
 </label>,
@@ -510,7 +510,7 @@ ShallowWrapper {
                   value=""
 />,
                 <label
-                  for="password"
+                  htmlFor="password"
 >
                   Password:
 </label>,
@@ -540,7 +540,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Username:",
-                  "for": "username",
+                  "htmlFor": "username",
                 },
                 "ref": null,
                 "rendered": "Username:",
@@ -569,7 +569,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Email:",
-                  "for": "email",
+                  "htmlFor": "email",
                 },
                 "ref": null,
                 "rendered": "Email:",
@@ -598,7 +598,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Password:",
-                  "for": "password",
+                  "htmlFor": "password",
                 },
                 "ref": null,
                 "rendered": "Password:",
