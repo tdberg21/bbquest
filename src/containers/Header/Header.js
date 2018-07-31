@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from './images/pig64.png';
+import PropTypes from 'prop-types';
 
 
 export default class Header extends Component {
@@ -36,3 +37,9 @@ export default class Header extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  user: PropTypes.object,
+  visited: PropTypes.array,
+  logOutUser: PropTypes.func
+};

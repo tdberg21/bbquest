@@ -10,6 +10,7 @@ export class VisitedContainer extends Component {
 
   displayVisited = () => {
     return this.props.visited.map((joint, index) => {
+      console.log(joint);
       return (
         <div 
           className='visited-card' 
@@ -17,6 +18,7 @@ export class VisitedContainer extends Component {
           // onClick={() => this.redirectToDetails(joint.restaurant_name)}
         >
           <h3 className='visited-header'>{joint.restaurant_name}</h3>
+          <img className='joint-image' src={joint.imageUrl}/>
           <div className='text-holder'>
             <p> Rating: </p>
             <p>{joint.rating}</p>

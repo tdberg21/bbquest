@@ -23,9 +23,11 @@ export class App extends Component {
   }
 
   checkVisited = (yelpId) => {
+    console.log(yelpId)
     const duplicate = this.props.visited.find(visited => {
       return visited.yelpId === yelpId;
     });
+    console.log(duplicate);
     if (duplicate) {
       this.props.history.push('/restaurants/');
     } else {
@@ -37,7 +39,8 @@ export class App extends Component {
 
   addRestaurantToDatabase = async (rating, notes, date, meal) => {
     const jointToSave = await this.findRestaurant(this.state.yelpId);
-    const results = await addVisitedRestaurant(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId);
+    console.log(jointToSave);
+    const results = await addVisitedRestaurant(rating, notes, date, this.props.user.id, jointToSave.name, meal, this.state.yelpId, jointToSave.image, jointToSave.url);
     const visited = await fetchVisitedRestaurants(this.props.user.id);
     this.props.addVisited(visited);
   }

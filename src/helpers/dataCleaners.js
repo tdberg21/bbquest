@@ -10,4 +10,5 @@ export const scrubRestaurants = (response) => {
       address: {address1: business.location.address1, city: business.location.city, state: business.location.state},
       phone: business.display_phone
     };
-  })};
+  }); 
+};
