@@ -1,9 +1,9 @@
+/*eslint-disable no-undef*/
+
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { App, mapDispatchToProps } from './App';
 import { shallow } from 'enzyme';
 import { addRestaurants, logOutUser, addVisited } from '../../actions';
-import { addVisitedRestaurant } from '../../helpers/apiCalls';
 
 describe('APP TESTS', () => {
   it('should match the snapshot', () => {
@@ -80,6 +80,7 @@ describe('APP TESTS', () => {
   });
 
   describe('mapDispatchToProps', () => {
+    
     it('calls dispatch with addRestaurants action', async () => {
       const mockDispatch = jest.fn();
       const actionToDispatch = addRestaurants(['PeeWees']);

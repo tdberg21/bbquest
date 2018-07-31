@@ -1,7 +1,8 @@
+/*eslint-disable no-undef*/
+
 import React from 'react';
 import { RestaurantDetails, mapStateToProps } from './RestaurantDetails';
 import { shallow } from 'enzyme';
-import { fetchDetails } from '../../helpers/apiCalls';
 
 describe('RESTAURANT DETAILS TESTS', () => {
   it('should match the snapshot', () => {

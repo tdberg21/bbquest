@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './VisitedContainer.css';
+import PropTypes from 'prop-types';
 
 export class VisitedContainer extends Component {
 
-  // redirectToDetails = (name) => {
-  //   this.props.history.push(`/restaurants/${name}`);
-  // }
 
   displayVisited = () => {
     return this.props.visited.map((joint, index) => {
@@ -14,9 +12,9 @@ export class VisitedContainer extends Component {
         <div 
           className='visited-card' 
           key={`${index}+ ${joint.restaurant_name}`}
-          // onClick={() => this.redirectToDetails(joint.restaurant_name)}
         >
           <h3 className='visited-header'>{joint.restaurant_name}</h3>
+          <img className='joint-image' src={joint.imageUrl}/>
           <div className='text-holder'>
             <p> Rating: </p>
             <p>{joint.rating}</p>
@@ -51,3 +49,7 @@ export const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, null)(VisitedContainer);
+
+VisitedContainer.propTypes = {
+  visited: PropTypes.array
+};

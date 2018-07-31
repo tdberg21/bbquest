@@ -4,6 +4,7 @@ import { withRouter, Link } from 'react-router-dom';
 import './RestaurantDetails.css';
 import { connect } from 'react-redux';
 import pig from '../../pig.gif';
+import PropTypes from 'prop-types';
 
 export class RestaurantDetails extends Component {
   constructor () {
@@ -39,9 +40,18 @@ export class RestaurantDetails extends Component {
               <br/>
             </div>
             <div className='details-lower-section'>
-              <a className='yelp-link' href={this.props.url} target='_blank'>Visit on Yelp!</a>
+              <a 
+                className='yelp-link' 
+                href={this.props.url} target='_blank'>
+                Visit on Yelp!
+              </a>
               <p>Phone: {this.props.phone} </p>
-              <p>Address: {this.props.address.address1},<br/> {this.props.address.city}, {this.props.address.state}</p>
+              <p>Address: 
+                {this.props.address.address1},
+                <br/> 
+                {this.props.address.city}, 
+                {this.props.address.state}
+              </p>
               <p>Price Range: {this.props.price} </p>
               <p>Rating: {this.props.rating} /5</p>
               <button 
@@ -54,9 +64,15 @@ export class RestaurantDetails extends Component {
           </section>
           <section className='reviews-section'>
             <h5>Reviews:</h5>
-            <p className='reviews'> {this.state.results.reviews[0] ? `${this.state.results.reviews[0].text}` : ''}</p>
-            <p className='reviews'> {this.state.results.reviews[1] ? `${this.state.results.reviews[1].text}` : ''} </p>
-            <p className='reviews'> {this.state.results.reviews[2] ? `${this.state.results.reviews[2].text}` : ''} </p>
+            <p className='reviews'> 
+              {this.state.results.reviews[0] ? `${this.state.results.reviews[0].text}` : ''}
+            </p>
+            <p className='reviews'> 
+              {this.state.results.reviews[1] ? `${this.state.results.reviews[1].text}` : ''} 
+            </p>
+            <p className='reviews'> 
+              {this.state.results.reviews[2] ? `${this.state.results.reviews[2].text}` : ''} 
+            </p>
             <Link to={'/restaurants/'}>Back</Link>
           </section>
         </div>
@@ -79,3 +95,16 @@ export const mapStateToProps = state => ({
 });
 
 export default withRouter(connect(mapStateToProps, null)(RestaurantDetails));
+
+RestaurantDetails.propTypes = {
+  address: PropTypes.object,
+  id: PropTypes.number,
+  checkVisited: PropTypes.func,
+  phone: PropTypes.string,
+  url: PropTypes.string,
+  price: PropTypes.string,
+  rating: PropTypes.number,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  history: PropTypes.object
+};

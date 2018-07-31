@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 import './VisitedForm.css';
+import PropTypes from 'prop-types';
 
 
 export class VisitedForm extends Component {
@@ -113,3 +114,9 @@ export const mapStateToProps = (state) => ({
 });
 
 export default withRouter(connect(mapStateToProps, null)(VisitedForm));
+
+VisitedForm.propTypes = {
+  user: PropTypes.object,
+  history: PropTypes.object,
+  addRestaurantToDatabase: PropTypes.func
+};

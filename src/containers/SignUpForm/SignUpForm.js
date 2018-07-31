@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { signUpUser } from '../../helpers/apiCalls';
 import './SignUpForm.css';
 import { loginUser } from '../../actions';
+import PropTypes from 'prop-types';
 
 
 export class SignUpForm extends Component {
@@ -40,7 +41,7 @@ export class SignUpForm extends Component {
           onSubmit={this.handleSubmit}
         >
           <div className='inputs'>
-            <label for='username'>Username:</label>
+            <label htmlFor='username'>Username:</label>
             <input
               id='username'
               className='username-field input-fields'
@@ -50,7 +51,7 @@ export class SignUpForm extends Component {
               value={this.state.username}
               onChange={this.handleChange}
             />
-            <label for='email'>Email:</label>
+            <label htmlFor='email'>Email:</label>
             <input
               id='email'
               className='email-field input-fields'
@@ -60,7 +61,7 @@ export class SignUpForm extends Component {
               value={this.state.email}
               onChange={this.handleChange}
             />
-            <label for='password'>Password:</label>
+            <label htmlFor='password'>Password:</label>
             <input
               id='password'
               className='password-field input-fields'
@@ -91,3 +92,8 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(null, mapDispatchToProps)(SignUpForm);
+
+SignUpForm.propTypes = {
+  loginUser: PropTypes.func,
+  history: PropTypes.object
+};

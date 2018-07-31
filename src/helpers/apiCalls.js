@@ -1,3 +1,5 @@
+/*eslint-disable camelcase, max-len*/
+
 import { apiKey } from './apiKey';
 
 export const fetchRestaurantData = async (key, location) => {
@@ -71,18 +73,18 @@ export const fetchVisitedRestaurants = async (user_id) => {
   return await results;
 };
 
-export const addVisitedRestaurant = async (rating, notes, date, user_id, restaurant_name, meal, yelpId) => {
-  // if (!rating || rating === '') {
-  //   rating = 'n/a';
-  // }
-  // if (!notes) {
-  //   notes='n/a';
-  // }
-  // if (!date) {
-  //   date='n/a';
-  // }
-
-  const url = `http://localhost:3000/api/v1/restaurants?rating=${rating}&notes=${notes}&date=${date}&user_id=${user_id}&restaurant_name=${restaurant_name}&meal=${meal}&yelpId=${yelpId}`;
+export const addVisitedRestaurant = async (rating, notes, date, user_id, restaurant_name, meal, yelpId, imageUrl, yelpUrl) => {
+  if (!rating || rating === '') {
+    rating = 'n/a';
+  }
+  if (!notes) {
+    notes='n/a';
+  }
+  if (!date) {
+    date='n/a';
+  }
+  const url2 = 'yelpUrl.com';
+  const url = `http://localhost:3000/api/v1/restaurants?rating=${rating}&notes=${notes}&date=${date}&user_id=${user_id}&restaurant_name=${restaurant_name}&meal=${meal}&yelpId=${yelpId}&imageUrl=${imageUrl}&yelpUrl=${url2}`;
   const response = await fetch(url, {
     method: 'POST',
     body: JSON.stringify({
@@ -92,7 +94,9 @@ export const addVisitedRestaurant = async (rating, notes, date, user_id, restaur
       user_id,
       restaurant_name,
       meal,
-      yelpId
+      yelpId,
+      imageUrl,
+      yelpUrl
     })});
   const results = await response.json();
   return await results;

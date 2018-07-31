@@ -1,3 +1,5 @@
+/*eslint-disable camelcase*/
+
 import { visitedReducer } from '../visitedReducer';
 import * as actions from '../../actions';
 

@@ -1,3 +1,5 @@
+/*eslint-disable no-undef*/
+
 import { fetchRestaurantData, fetchUser, fetchDetails, signUpUser, fetchVisitedRestaurants, addVisitedRestaurant } from '../apiCalls';
 
 describe('API CALL TESTS', () => {
@@ -43,7 +45,7 @@ describe('API CALL TESTS', () => {
   });
 
   it('should fetch a user', async () => {
-    const expected = { results: { username: 'Tory', id: 9 } }
+    const expected = { results: { username: 'Tory', id: 9 } };
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       json: () => Promise.resolve({
         results: { username: 'Tory', id: 9 }

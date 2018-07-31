@@ -1,5 +1,10 @@
 .restaurant-details-container {
   display: flex;
+  justify-content: space-evenly;
+  width: 101%;
+  background-image: url(https://www.pigrigbbq.com/files/2017-02/background.jpg);
+  height: 1300px;
+  background-size: cover;
 }
 
 .reviews {
@@ -7,14 +12,21 @@
 }
 
 .reviews-section {
+  background-color: rgb(243, 243, 243, .8);
   width: 40%;
+  height: 45vh;
   padding: 0.83em;
   text-align: left;
-  margin: 1em;
+  margin: 3em;
+  border-radius: 0.75em;
 }
+
 .details-section {
+  background-color: rgb(243, 243, 243, .8);
   width: 45%;
-  margin: 1em;
+  height: 80vh;
+  margin: 3em;
+  border-radius: 0.75em;
 }
 
 .visited-button {

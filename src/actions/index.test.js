@@ -10,7 +10,7 @@ describe('ACTION TESTS', () => {
       const result = addRestaurants(restaurants);
 
       expect(result).toEqual(expected);
-    })
+    });
 
   });
 

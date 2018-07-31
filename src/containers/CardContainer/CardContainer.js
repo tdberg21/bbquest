@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Card from '../../components/Card/Card';
 import './CardContainer.css';
 import pig from '../../pig.gif';
+import PropTypes from 'prop-types';
 
 export class CardContainer extends Component {
 
@@ -33,3 +34,7 @@ export const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, null)(CardContainer);
+
+CardContainer.propTypes = {
+  restaurants: PropTypes.array
+};
