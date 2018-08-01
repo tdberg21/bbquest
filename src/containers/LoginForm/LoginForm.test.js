@@ -4,14 +4,16 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { LoginForm, mapStateToProps, mapDispatchToProps } from './LoginForm';
 import { loginUser, addVisited } from '../../actions';
-import { fetchUser, fetchVisitedRestaurants } from '../../helpers/apiCalls';
+
 
 describe('LOGINFORM TESTS', () => {
   let wrapper;
   let mockHistory = {push: jest.fn()};
+  let mockAddVisited = jest.fn();
+  let mockLoginUser = jest.fn();
 
   beforeEach(() => {
-    wrapper = shallow(<LoginForm loginUser={jest.fn()} addVisited={jest.fn()} history={mockHistory}/>);
+    wrapper = shallow(<LoginForm loginUser={mockLoginUser} addVisited={mockAddVisited} history={mockHistory}/>);
   });
 
   it('should match the snapshot without a user', () => {  
@@ -34,6 +36,16 @@ describe('LOGINFORM TESTS', () => {
 
 
   it('should invoke handleSubmit when the form is submitted', () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({
+        results: { username: 'Tory', id: 9 }
+      })
+    }));
+    wrapper.setState({
+      username: 'Tory',
+      email: 'rfd123@aol.com',
+      password: 'taco'
+    });
     const spy = jest.spyOn(wrapper.instance(), 'handleSubmit');
     wrapper.setState({
       username: 'nick',
@@ -48,18 +60,38 @@ describe('LOGINFORM TESTS', () => {
     expect(spy).toHaveBeenCalledWith(mockEvent);
   });
 
-  it('should invoke fetchUser when handleSubmit is called', async () => {
+  it('should invoke loginUser when handleSubmit is called', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({
+        results: { username: 'Tory', id: 9 }
+      })
+    }));
+    wrapper.setState({
+      username: 'Tory',
+      email: 'rfd123@aol.com',
+      password: 'taco'
+    });
     const mockEvent = { preventDefault: jest.fn() };
     await wrapper.instance().handleSubmit(mockEvent);
 
-    expect(fetchUser).toHaveBeenCalled();
+    expect(mockLoginUser).toHaveBeenCalled();
   });
 
-  it('should invoke fetchVisitedRestaurants when handleSubmit is called', async () => {
+  it('should invoke addVisited Restaurants when handleSubmit is called', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({
+        results: { username: 'Tory', id: 9 }
+      })
+    }));
+    wrapper.setState({
+      username: 'Tory',
+      email: 'rfd123@aol.com',
+      password: 'taco'
+    });
     const mockEvent = { preventDefault: jest.fn() };
     await wrapper.instance().handleSubmit(mockEvent);
 
-    expect(fetchVisitedRestaurants).toHaveBeenCalled();
+    expect(mockAddVisited).toHaveBeenCalled();
   });
 
   it('should reset the state when resetState is invoked', () => {

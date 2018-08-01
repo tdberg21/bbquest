@@ -12,7 +12,8 @@
   width: 40%;
   height: 6em;
   background-color: rgb(243, 243, 243, .8);
-  padding: 2em 4em 4em 4em; 
+  padding: 2em 4em 4em 4em;
+  border-radius: 1em; 
 }
 
 .location-field {
@@ -38,4 +39,6 @@
 .search-label {
   font-size: 1.1rem;
   height: 1em;
+  width: 100%;
+  display: block;
 }

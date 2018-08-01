@@ -5,9 +5,20 @@ import { RestaurantDetails, mapStateToProps } from './RestaurantDetails';
 import { shallow } from 'enzyme';
 
 describe('RESTAURANT DETAILS TESTS', () => {
-  it('should match the snapshot', () => {
+  
+  it('should match the snapshot without reviews', () => {
     const wrapper = shallow(<RestaurantDetails/>);
 
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should match the snapshot with reviews', () => {
+    const mockResults = {reviews: ['review1', 'review2', 'review3']};
+    const mockAddress = { address1: '1 Taco Street', city: 'tacotown', state: 'taco' };
+    const wrapper = shallow(<RestaurantDetails address={mockAddress}/>);
+    wrapper.setState({
+      results: mockResults
+    });
     expect(wrapper).toMatchSnapshot();
   });
 
