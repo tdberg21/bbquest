@@ -35,7 +35,17 @@ describe('LOGINFORM TESTS', () => {
   });
 
 
-  it.skip('should invoke handleSubmit when the form is submitted', () => {
+  it('should invoke handleSubmit when the form is submitted', () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({
+        results: { username: 'Tory', id: 9 }
+      })
+    }));
+    wrapper.setState({
+      username: 'Tory',
+      email: 'rfd123@aol.com',
+      password: 'taco'
+    });
     const spy = jest.spyOn(wrapper.instance(), 'handleSubmit');
     wrapper.setState({
       username: 'nick',
