@@ -41,4 +41,17 @@
   height: 1em;
   width: 100%;
   display: block;
+  text-align: center;
+}
+
+@media screen and (max-width: 523px) {
+
+  .search-form {
+    height: 8em;
+  }
+
+  .search-label {
+    display: none;
+  }
+
 }
