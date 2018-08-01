@@ -39,4 +39,6 @@
 .search-label {
   font-size: 1.1rem;
   height: 1em;
+  width: 100%;
+  display: block;
 }

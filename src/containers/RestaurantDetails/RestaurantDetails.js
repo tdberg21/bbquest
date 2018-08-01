@@ -113,7 +113,7 @@ RestaurantDetails.propTypes = {
   phone: PropTypes.string,
   url: PropTypes.string,
   price: PropTypes.string,
-  rating: PropTypes.number,
+  rating: PropTypes.string,
   image: PropTypes.string,
   name: PropTypes.string,
   history: PropTypes.object

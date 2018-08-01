@@ -51,3 +51,19 @@
 .details-label {
   font-weight: 800;
 }
+
+@media screen and (max-width: 800px) {
+
+  .restaurant-details-container {
+    flex-direction: column;
+  }
+
+  .details-section {
+    width: 80%
+  }
+  
+  .reviews-section {
+    width: 80%
+  }
+
+}

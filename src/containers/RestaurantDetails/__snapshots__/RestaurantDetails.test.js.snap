@@ -1,6 +1,1116 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RESTAURANT DETAILS TESTS should match the snapshot 1`] = `
+exports[`RESTAURANT DETAILS TESTS should match the snapshot with reviews 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RestaurantDetails
+    address={
+        Object {
+            "address1": "1 Taco Street",
+            "city": "tacotown",
+            "state": "taco",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <section
+          className="details-section"
+>
+          <div
+                    className="header-image-section"
+          >
+                    <h2 />
+                    <img
+                              alt="restaurant"
+                              height="200px"
+                              src={undefined}
+                    />
+                    <br />
+          </div>
+          <div
+                    className="details-lower-section"
+          >
+                    <a
+                              className="yelp-link"
+                              href={undefined}
+                              target="_blank"
+                    >
+                              Visit on Yelp!
+                    </a>
+                    <p>
+                              <b>
+                                        Phone: 
+                              </b>
+                    </p>
+                    <p>
+                              <b>
+                                        Address: 
+                              </b>
+                              1 Taco Street
+                              ,
+                              <br />
+                              tacotown
+                              ,
+                              taco
+                    </p>
+                    <p>
+                              <b>
+                                        Price Range: 
+                              </b>
+                    </p>
+                    <p>
+                              <b>
+                                        Rating: 
+                              </b>
+                               /5
+                    </p>
+                    <button
+                              className="visited-button"
+                              onClick={[Function]}
+                    >
+                              Mark As Visited
+                    </button>
+          </div>
+</section>,
+        <section
+          className="reviews-section"
+>
+          <h5>
+                    Reviews: 
+          </h5>
+          <p
+                    className="reviews"
+          >
+                    undefined
+          </p>
+          <p
+                    className="reviews"
+          >
+                    undefined
+          </p>
+          <p
+                    className="reviews"
+          >
+                    undefined
+          </p>
+          <Link
+                    replace={false}
+                    to="/restaurants/"
+          >
+                    Back
+          </Link>
+</section>,
+      ],
+      "className": "restaurant-details-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="header-image-section"
+>
+              <h2 />
+              <img
+                            alt="restaurant"
+                            height="200px"
+                            src={undefined}
+              />
+              <br />
+</div>,
+            <div
+              className="details-lower-section"
+>
+              <a
+                            className="yelp-link"
+                            href={undefined}
+                            target="_blank"
+              >
+                            Visit on Yelp!
+              </a>
+              <p>
+                            <b>
+                                          Phone: 
+                            </b>
+              </p>
+              <p>
+                            <b>
+                                          Address: 
+                            </b>
+                            1 Taco Street
+                            ,
+                            <br />
+                            tacotown
+                            ,
+                            taco
+              </p>
+              <p>
+                            <b>
+                                          Price Range: 
+                            </b>
+              </p>
+              <p>
+                            <b>
+                                          Rating: 
+                            </b>
+                             /5
+              </p>
+              <button
+                            className="visited-button"
+                            onClick={[Function]}
+              >
+                            Mark As Visited
+              </button>
+</div>,
+          ],
+          "className": "details-section",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2 />,
+                <img
+                  alt="restaurant"
+                  height="200px"
+                  src={undefined}
+/>,
+                <br />,
+              ],
+              "className": "header-image-section",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "restaurant",
+                  "height": "200px",
+                  "src": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <a
+                  className="yelp-link"
+                  href={undefined}
+                  target="_blank"
+>
+                  Visit on Yelp!
+</a>,
+                <p>
+                  <b>
+                                    Phone: 
+                  </b>
+</p>,
+                <p>
+                  <b>
+                                    Address: 
+                  </b>
+                  1 Taco Street
+                  ,
+                  <br />
+                  tacotown
+                  ,
+                  taco
+</p>,
+                <p>
+                  <b>
+                                    Price Range: 
+                  </b>
+</p>,
+                <p>
+                  <b>
+                                    Rating: 
+                  </b>
+                   /5
+</p>,
+                <button
+                  className="visited-button"
+                  onClick={[Function]}
+>
+                  Mark As Visited
+</button>,
+              ],
+              "className": "details-lower-section",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Visit on Yelp!",
+                  "className": "yelp-link",
+                  "href": undefined,
+                  "target": "_blank",
+                },
+                "ref": null,
+                "rendered": "Visit on Yelp!",
+                "type": "a",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <b>
+                      Phone: 
+</b>,
+                    undefined,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Phone: ",
+                    },
+                    "ref": null,
+                    "rendered": "Phone: ",
+                    "type": "b",
+                  },
+                  undefined,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <b>
+                      Address: 
+</b>,
+                    "1 Taco Street",
+                    ",",
+                    <br />,
+                    "tacotown",
+                    ",",
+                    "taco",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Address: ",
+                    },
+                    "ref": null,
+                    "rendered": "Address: ",
+                    "type": "b",
+                  },
+                  "1 Taco Street",
+                  ",",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": "br",
+                  },
+                  "tacotown",
+                  ",",
+                  "taco",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <b>
+                      Price Range: 
+</b>,
+                    undefined,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Price Range: ",
+                    },
+                    "ref": null,
+                    "rendered": "Price Range: ",
+                    "type": "b",
+                  },
+                  undefined,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <b>
+                      Rating: 
+</b>,
+                    undefined,
+                    " /5",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Rating: ",
+                    },
+                    "ref": null,
+                    "rendered": "Rating: ",
+                    "type": "b",
+                  },
+                  undefined,
+                  " /5",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Mark As Visited",
+                  "className": "visited-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Mark As Visited",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h5>
+              Reviews: 
+</h5>,
+            <p
+              className="reviews"
+>
+              undefined
+</p>,
+            <p
+              className="reviews"
+>
+              undefined
+</p>,
+            <p
+              className="reviews"
+>
+              undefined
+</p>,
+            <Link
+              replace={false}
+              to="/restaurants/"
+>
+              Back
+</Link>,
+          ],
+          "className": "reviews-section",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Reviews: ",
+            },
+            "ref": null,
+            "rendered": "Reviews: ",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "undefined",
+              "className": "reviews",
+            },
+            "ref": null,
+            "rendered": "undefined",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "undefined",
+              "className": "reviews",
+            },
+            "ref": null,
+            "rendered": "undefined",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "undefined",
+              "className": "reviews",
+            },
+            "ref": null,
+            "rendered": "undefined",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Back",
+              "replace": false,
+              "to": "/restaurants/",
+            },
+            "ref": null,
+            "rendered": "Back",
+            "type": [Function],
+          },
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <section
+            className="details-section"
+>
+            <div
+                        className="header-image-section"
+            >
+                        <h2 />
+                        <img
+                                    alt="restaurant"
+                                    height="200px"
+                                    src={undefined}
+                        />
+                        <br />
+            </div>
+            <div
+                        className="details-lower-section"
+            >
+                        <a
+                                    className="yelp-link"
+                                    href={undefined}
+                                    target="_blank"
+                        >
+                                    Visit on Yelp!
+                        </a>
+                        <p>
+                                    <b>
+                                                Phone: 
+                                    </b>
+                        </p>
+                        <p>
+                                    <b>
+                                                Address: 
+                                    </b>
+                                    1 Taco Street
+                                    ,
+                                    <br />
+                                    tacotown
+                                    ,
+                                    taco
+                        </p>
+                        <p>
+                                    <b>
+                                                Price Range: 
+                                    </b>
+                        </p>
+                        <p>
+                                    <b>
+                                                Rating: 
+                                    </b>
+                                     /5
+                        </p>
+                        <button
+                                    className="visited-button"
+                                    onClick={[Function]}
+                        >
+                                    Mark As Visited
+                        </button>
+            </div>
+</section>,
+          <section
+            className="reviews-section"
+>
+            <h5>
+                        Reviews: 
+            </h5>
+            <p
+                        className="reviews"
+            >
+                        undefined
+            </p>
+            <p
+                        className="reviews"
+            >
+                        undefined
+            </p>
+            <p
+                        className="reviews"
+            >
+                        undefined
+            </p>
+            <Link
+                        replace={false}
+                        to="/restaurants/"
+            >
+                        Back
+            </Link>
+</section>,
+        ],
+        "className": "restaurant-details-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="header-image-section"
+>
+                <h2 />
+                <img
+                                alt="restaurant"
+                                height="200px"
+                                src={undefined}
+                />
+                <br />
+</div>,
+              <div
+                className="details-lower-section"
+>
+                <a
+                                className="yelp-link"
+                                href={undefined}
+                                target="_blank"
+                >
+                                Visit on Yelp!
+                </a>
+                <p>
+                                <b>
+                                                Phone: 
+                                </b>
+                </p>
+                <p>
+                                <b>
+                                                Address: 
+                                </b>
+                                1 Taco Street
+                                ,
+                                <br />
+                                tacotown
+                                ,
+                                taco
+                </p>
+                <p>
+                                <b>
+                                                Price Range: 
+                                </b>
+                </p>
+                <p>
+                                <b>
+                                                Rating: 
+                                </b>
+                                 /5
+                </p>
+                <button
+                                className="visited-button"
+                                onClick={[Function]}
+                >
+                                Mark As Visited
+                </button>
+</div>,
+            ],
+            "className": "details-section",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h2 />,
+                  <img
+                    alt="restaurant"
+                    height="200px"
+                    src={undefined}
+/>,
+                  <br />,
+                ],
+                "className": "header-image-section",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "restaurant",
+                    "height": "200px",
+                    "src": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <a
+                    className="yelp-link"
+                    href={undefined}
+                    target="_blank"
+>
+                    Visit on Yelp!
+</a>,
+                  <p>
+                    <b>
+                                        Phone: 
+                    </b>
+</p>,
+                  <p>
+                    <b>
+                                        Address: 
+                    </b>
+                    1 Taco Street
+                    ,
+                    <br />
+                    tacotown
+                    ,
+                    taco
+</p>,
+                  <p>
+                    <b>
+                                        Price Range: 
+                    </b>
+</p>,
+                  <p>
+                    <b>
+                                        Rating: 
+                    </b>
+                     /5
+</p>,
+                  <button
+                    className="visited-button"
+                    onClick={[Function]}
+>
+                    Mark As Visited
+</button>,
+                ],
+                "className": "details-lower-section",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Visit on Yelp!",
+                    "className": "yelp-link",
+                    "href": undefined,
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": "Visit on Yelp!",
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <b>
+                        Phone: 
+</b>,
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Phone: ",
+                      },
+                      "ref": null,
+                      "rendered": "Phone: ",
+                      "type": "b",
+                    },
+                    undefined,
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <b>
+                        Address: 
+</b>,
+                      "1 Taco Street",
+                      ",",
+                      <br />,
+                      "tacotown",
+                      ",",
+                      "taco",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Address: ",
+                      },
+                      "ref": null,
+                      "rendered": "Address: ",
+                      "type": "b",
+                    },
+                    "1 Taco Street",
+                    ",",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {},
+                      "ref": null,
+                      "rendered": null,
+                      "type": "br",
+                    },
+                    "tacotown",
+                    ",",
+                    "taco",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <b>
+                        Price Range: 
+</b>,
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Price Range: ",
+                      },
+                      "ref": null,
+                      "rendered": "Price Range: ",
+                      "type": "b",
+                    },
+                    undefined,
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <b>
+                        Rating: 
+</b>,
+                      undefined,
+                      " /5",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Rating: ",
+                      },
+                      "ref": null,
+                      "rendered": "Rating: ",
+                      "type": "b",
+                    },
+                    undefined,
+                    " /5",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Mark As Visited",
+                    "className": "visited-button",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Mark As Visited",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h5>
+                Reviews: 
+</h5>,
+              <p
+                className="reviews"
+>
+                undefined
+</p>,
+              <p
+                className="reviews"
+>
+                undefined
+</p>,
+              <p
+                className="reviews"
+>
+                undefined
+</p>,
+              <Link
+                replace={false}
+                to="/restaurants/"
+>
+                Back
+</Link>,
+            ],
+            "className": "reviews-section",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Reviews: ",
+              },
+              "ref": null,
+              "rendered": "Reviews: ",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "undefined",
+                "className": "reviews",
+              },
+              "ref": null,
+              "rendered": "undefined",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "undefined",
+                "className": "reviews",
+              },
+              "ref": null,
+              "rendered": "undefined",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "undefined",
+                "className": "reviews",
+              },
+              "ref": null,
+              "rendered": "undefined",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Back",
+                "replace": false,
+                "to": "/restaurants/",
+              },
+              "ref": null,
+              "rendered": "Back",
+              "type": [Function],
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`RESTAURANT DETAILS TESTS should match the snapshot without reviews 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
