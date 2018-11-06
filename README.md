@@ -13,9 +13,8 @@ npm install
 npm start
 ```
 
-```
 [Backend Repo](https://github.com/tdberg21/barbecue-BE)
-```
+
 
 ## Screenshots
 Home Page
